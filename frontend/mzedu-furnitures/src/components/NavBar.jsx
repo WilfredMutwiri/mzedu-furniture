@@ -34,7 +34,7 @@ export default function NavBar() {
         HOME
       </Navbar.Link>
       <Navbar.Link href="/featuredProducts">FEATURED</Navbar.Link>
-      <Navbar.Link href="#">LIVING ROOM</Navbar.Link>
+      <Navbar.Link href="#">NEW ARRIVALS</Navbar.Link>
       <Navbar.Link href="#">LIVING ROOM</Navbar.Link>
       <Navbar.Link href="#">DINING</Navbar.Link>
       <Navbar.Link href="#">BEDROOM</Navbar.Link>

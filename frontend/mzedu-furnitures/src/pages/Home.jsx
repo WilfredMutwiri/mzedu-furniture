@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { Carousel, Label } from "flowbite-react";
 import { FaArrowRight } from "react-icons/fa6";
+import { FaCartArrowDown } from "react-icons/fa";
 
 import banner2 from '../images/banner2.jpg'
 import banner1 from '../images/banner1.jpg'
@@ -55,21 +56,11 @@ export default function Home() {
   )
   const dealimages=[popular1,dinningTable1,dinningTable2];
 
-  const arrivalImages=[Arrival1,Arrival2,Arrival3,Arrival4,Arrival5]
-  const [currentArrivalImage,setCurrentArrivalImage]=useState(0);
-  const [arrivalName,setArrivalName]=useState(0);
-  const [arrivalPrice,setArrivalPrice]=useState(0);
-  const arrivalPrices=['12,000','15,000','10,000','23,000','25,600']
-  const arrivalNames=["Dining Set","Table Talk Set","Wall Clock","Infinity Cup","Wall Decoraters"]
-
   const [currentdealImage,setCurrentdealImage]=useState(0);
   const [currentImageName,setImageName]=useState(0);
   const [decorImage,setDecorImage]=useState(0)
   const [imagePrice,setImagePrice]=useState(0);
 
-  const [featuredImage,setFeaturedImage]=useState(0);
-  const [featureImageName,setFeaturedImageName]=useState(0)
-  const [featuredPrice,setFeaturedPrices]=useState(0)
 // features products
   const featuredImages=[featured1,featured2,featured3,featured4,featured5,featured6,featured7,featured8,featured10,featured9]
   const imageName=["Outdoor Tent","Complete Dinning Table","Living Room Table"]
@@ -136,30 +127,6 @@ export default function Home() {
         }
       })
       }
-        // new Arrivals section
-      const changeNewArrival=(direction)=>{
-        setCurrentArrivalImage((prevArrivalImage)=>{
-          if(direction==="prev"){
-            return prevArrivalImage===0?arrivalImages.length-1:prevArrivalImage-1;
-          }else{
-            return prevArrivalImage===arrivalImages.length-1?0:prevArrivalImage+1;
-          }
-        })
-        setArrivalName((prevArrivalName)=>{
-          if(direction==="prev"){
-            return prevArrivalName===0?arrivalNames.length-1:prevArrivalName-1;
-          }else{
-            return prevArrivalName===arrivalNames.length-1?0:prevArrivalName+1
-          }
-        })
-        setArrivalPrice((prevPrice)=>{
-          if(direction==="prev"){
-            return prevPrice===0?arrivalPrices.length-1:prevPrice-1;
-          }else{
-            return prevPrice===arrivalPrices.length-1?0:prevPrice+1
-          }
-        })
-        }
   return (
     <div >
       <div className='max-w-[1400px] h-[780px] w-full m-auto'>
@@ -175,7 +142,7 @@ export default function Home() {
           </div>
         <h2 className='text-white z-50 relative text-center font-serif text-4xl md:text-5xl pt-5'>Furniture <span className='text-orange-500'>&</span> Deco</h2>
         <div className='flex gap-5 justify-center mt-10'>
-          <Button gradientDuoTone="pinkToOrange">Shop Now</Button>
+          <Button gradientDuoTone="pinkToOrange">Make an Order</Button>
           <Button gradientDuoTone="pinkToOrange">New Arrivals</Button>
         </div>
         </div>
@@ -316,7 +283,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className='ext-white bg-teal-900 p-6 w-11/12 m-auto Wmb-5 -mt-14 md:mt-5 mb-10'>
+            <div className='text-white bg-teal-900 p-6 w-11/12 m-auto Wmb-5 -mt-14 md:mt-5 mb-10'>
               <p className='text-center leading-relaxed font-semibold text-lg'>
                 SAVE UP TO 25% OFF SOFAS!
               </p>
@@ -432,69 +399,83 @@ export default function Home() {
         <div className={`mt-5 w-56 m-auto border-black border-t-4 border-b-4 `}>
         <h2 className='text-center font-dancing text-3xl p-2'>New Arrivals</h2>
         </div>
-        <div className={`w-11/12 m-auto pt-10 pb-5 hidden md:flex gap-6 transition-opacity duration-100`} id='visibleBig'>
-          <div className=''>
+        <div className='w-11/12 mx-auto p-3 sm:text-sm'>
+          <p className='leading-relaxed'>
+          Discover the elegance in every detail with our latest furniture arrivals, where timeless design meets modern comfort. Elevate your space with pieces that inspire and invite warmth into your home. Embrace the perfect blend of style and function, crafted to make every moment unforgettable.
+          </p>
+        </div>
+        <div className={`w-11/12 m-auto pt-5 pb-5 hidden md:flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        {/* first arrival */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
             <img className='w-52 h-[200px] object-fill' src={Arrival1}/>
-            <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Dining Set</h2>
-            <h3 className=' text-red-500'>Ksh 12,000</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>DINING SET</h2>
+              <h3 className='line-through text-sm'>Ksh. 14,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 12,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
-          <div className=''>
-          <img className='w-52' src={Arrival2}/>
-          <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Table Talk Set</h2>
-            <h3 className=' text-red-500'>Ksh 15,000</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+          {/* second arrival */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={Arrival2}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>TABLE SET</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
-          <div>
-          <img className='w-52 h-[200px] object-cover' src={Arrival3}/>
-          <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Wall Clock</h2>
-            <h3 className=' text-red-500'>Ksh 10,000</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+          {/* third arrival */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={Arrival3}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>WALL CLOCK</h2>
+              <h3 className='line-through text-sm'>Ksh. 14,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 10,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
-          <div>
-          <img className='w-52 h-[200px] object-cover' src={Arrival4}/>
-          <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Infinity Cup</h2>
-            <h3 className=' text-red-500'>Ksh 23,000</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+          {/* fourth arrival */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={Arrival4}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>INFINITY CUP</h2>
+              <h3 className='line-through text-sm'>Ksh.7,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 2,300</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
-          <div>
-          <img className='w-52 h-[200px] object-cover' src={Arrival5}/>
-          <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Wall Decorators</h2>
-            <h3 className=' text-red-500'>Ksh 25,600</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+{/* fifth arrival */}
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={Arrival5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>WALL DECO</h2>
+              <h3 className='line-through text-sm'>Ksh. 25,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
         </div>
-        {/* visible small device */}
-        <div className="flex md:hidden gap-2 m-auto justify-center pt-10 pb-24">
-                <Button className='h-10 my-auto w-6' onClick={()=>changeNewArrival('prev')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-auto h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-                </Button>
-                <div id='decor'>
-                <img className='w-60 h-60 object-cover mx-auto' src={arrivalImages[currentArrivalImage]}/>
-                <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>{arrivalNames[arrivalName]}</h2>
-            <h3 className=' text-red-500'>{arrivalPrices[arrivalPrice]}</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
-            </div>
-                </div>
-                <Button className='h-10 my-auto w-6' onClick={()=>changeNewArrival('next')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-                </Button>
-              </div>
       </section>
       {/* testimonies section */}
       <hr className='w-11/12 m-auto' />
