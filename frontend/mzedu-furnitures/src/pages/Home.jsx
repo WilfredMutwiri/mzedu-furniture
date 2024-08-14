@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
-import { Carousel, Label } from "flowbite-react";
+import {Label } from "flowbite-react";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaCartArrowDown } from "react-icons/fa";
+import { Carousel } from 'react-responsive-carousel';
 
 import banner2 from '../images/banner2.jpg'
 import banner1 from '../images/banner1.jpg'
@@ -127,12 +128,26 @@ export default function Home() {
         }
       })
       }
+      const homeBannerImages=[banner1,banner2,banner3]
   return (
     <div >
       <div className='max-w-[1400px] h-[780px] w-full m-auto'>
-      <div style={{backgroundImage:`url(${images[currentImage]})`}} className='bg w-full h-full bg-cover bg-center duration-500'>
-        <div className='pt-16 md:pt-24'>
-          <div className='flex w-full md:w-96 mx-auto'>
+        {/* home carousel */}
+      <div>
+      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
+        {
+          homeBannerImages.map((image,index)=>(
+            <div key={index}>
+              <img className='w-full h-auto' src={image} alt={`Banner ${index+1}`}/>
+            </div>
+          ))
+        }
+        </Carousel>
+          {/* Dark Background Overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-50 z-10 max-w-[1400px] h-[780px] w-full m-auto"></div>
+          {/* Text Overlay */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-10">
+          <div className='flex w-full md:w-96 mx-auto pt-16 md:pt-28'>
           <div className='w-52 mx-auto border-r-4 border-white z-50 p-3 font-bold'>
           <h1 className=' text-center text-orange-500 font-semibold text-5xl md:text-7xl font-dancing'>Mzedu</h1>
           </div>
@@ -140,12 +155,12 @@ export default function Home() {
             <h2>Where quality meets passion</h2>
           </div>
           </div>
-        <h2 className='text-white z-50 relative text-center font-serif text-4xl md:text-5xl pt-5'>Furniture <span className='text-orange-500'>&</span> Deco</h2>
+          <h2 className='text-white z-50 relative text-center font-serif text-4xl md:text-5xl pt-5'>Furniture <span className='text-orange-500'>&</span> Deco</h2>
         <div className='flex gap-5 justify-center mt-10'>
           <Button gradientDuoTone="pinkToOrange">Make an Order</Button>
           <Button gradientDuoTone="pinkToOrange">New Arrivals</Button>
         </div>
-        </div>
+      </div>
       </div>
       </div>
       <section>

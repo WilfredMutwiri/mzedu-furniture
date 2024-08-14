@@ -17,7 +17,7 @@ export default function NavBar() {
     return ()=>clearInterval=(interval)
   },[])
   return (
-    <div>
+    <div className='relative z-50'>
       <Navbar fluid rounded className='bg-gray-100'>
     <Navbar.Brand gradientDuoTone="pinkToOrange">
       <img className='w-8' src={logo}/>
