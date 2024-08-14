@@ -162,10 +162,6 @@ export default function Home() {
         }
   return (
     <div >
-      <h2>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, eius!
-        lorrerwemsdla;sd
-      </h2>
       <div className='max-w-[1400px] h-[780px] w-full m-auto'>
       <div style={{backgroundImage:`url(${images[currentImage]})`}} className='bg w-full h-full bg-cover bg-center duration-500'>
         <div className='pt-16 md:pt-24'>
