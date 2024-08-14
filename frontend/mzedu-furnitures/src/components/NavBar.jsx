@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Button, Navbar } from "flowbite-react";
 import { Link } from 'react-router-dom';
 export default function NavBar() {
-  let adText=["Get 25% discount on purchases above Ksh 10,000","Get quality furniture at an affordable price","We offer free delivery"]
+  let adText=["..Just the best..","..Get quality furniture at an affordable price..","..We offer free delivery.."]
   const [newText,setNewText]=useState(0)
 
   const changeText=()=>{
@@ -46,7 +46,7 @@ export default function NavBar() {
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-0 md:mr-3">
   <path stroke-linecap="round" stroke-linejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
 </svg>
-    <h2 className='text-center'>{adText[newText]}</h2>
+    <h2 className='text-center text-sm md:text-normal'>{adText[newText]}</h2>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-0 md:ml-3">
   <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
 </svg>

@@ -3,6 +3,7 @@ import {Label } from "flowbite-react";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Carousel } from 'react-responsive-carousel';
+import { BsStars } from "react-icons/bs";
 
 import banner2 from '../images/banner2.jpg'
 import banner1 from '../images/banner1.jpg'
@@ -55,7 +56,7 @@ export default function Home() {
     }, 3000);
   }, [images.length],
   )
-  const dealimages=[popular1,dinningTable1,dinningTable2];
+  const dealimages=[popular1,popular2,popular3,dinningTable1,dinningTable2];
 
   const [currentdealImage,setCurrentdealImage]=useState(0);
   const [currentImageName,setImageName]=useState(0);
@@ -144,20 +145,20 @@ export default function Home() {
         }
         </Carousel>
           {/* Dark Background Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50 z-10 max-w-[1400px] h-[780px] w-full m-auto"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50 z-10 max-w-[1400px] h-[305px] -mt-[20px] md:h-[780px] w-full m-auto"></div>
           {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-10">
-          <div className='flex w-full md:w-96 mx-auto pt-16 md:pt-28'>
-          <div className='w-52 mx-auto border-r-4 border-white z-50 p-3 font-bold'>
-          <h1 className=' text-center text-orange-500 font-semibold text-5xl md:text-7xl font-dancing'>Mzedu</h1>
+      <div className="-mt-72 md:-mt-0 absolute inset-0 flex flex-col justify-center items-center text-white z-10">
+          <div className='flex w-full md:w-96 mx-auto pt-0 md:pt-28'>
+          <div className='w-52 mx-auto border-r-4 border-white z-50 p-0 md:p-3 font-bold'>
+          <h1 className=' text-center text-orange-500 font-semibold text-4xl md:text-7xl font-dancing'>Mzedu</h1>
           </div>
-          <div className='w-64 text-lg md:text-xl font-semibold text-white z-50 p-3'>
+          <div className='w-64 text-sm md:text-xl font-semibold text-white z-50 p-3'>
             <h2>Where quality meets passion</h2>
           </div>
           </div>
-          <h2 className='text-white z-50 relative text-center font-serif text-4xl md:text-5xl pt-5'>Furniture <span className='text-orange-500'>&</span> Deco</h2>
-        <div className='flex gap-5 justify-center mt-10'>
-          <Button gradientDuoTone="pinkToOrange">Make an Order</Button>
+          <h2 className='text-white z-50 relative text-center font-serif text-xl md:text-5xl pt-5'>Furniture <span className='text-orange-500'>&</span> Deco</h2>
+        <div className='hidden md:flex gap-5 justify-center mt-5 md:mt-10'>
+          <Button gradientDuoTone="pinkToOrange" className='text-xs'>Make an Order</Button>
           <Button gradientDuoTone="pinkToOrange">New Arrivals</Button>
         </div>
       </div>
@@ -165,7 +166,7 @@ export default function Home() {
       </div>
       <section>
         {/* home banner */}
-        <div className="w-10/12 mx-auto block md:grid grid-cols-3 -mt-56 z-50 relative mb-10">
+        <div className="w-10/12 mx-auto block md:grid grid-cols-3 -mt-[560px] md:-mt-56 z-50 relative mb-10">
           <div className="bg-orange-500">
             <h2 className="p-5 text-xl text-white font-semibold">DEALS OF THE DAY</h2>
             <hr />
@@ -175,27 +176,21 @@ export default function Home() {
             </p>
           </div>
           <div className="pb-3 border-r-4 border-white bg-gray-300">
-            <img src={dealimages[currentdealImage]}/>
-            <img className="w-14 -mt-64 md:-mt-72 ml-52 md:ml-64 absolute" src={newSign} alt="" />
-            <div className="block md:flex">
-              <div>
-              <h2 className="p-3 font-semibold">{imageName[currentImageName]}</h2>
-              <span className="p-3 text-red-600">Ksh {imagePrices[imagePrice]}</span>
-              </div>
-              <div className="flex gap-2 mt-2 h-9 ml-2 md:ml-0">
-                <Button onClick={()=>changedealImage('prev')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-                </Button>
-                <Button onClick={()=>changedealImage('next')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-                </Button>
-              </div>
+          <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
+        {
+          dealimages.map((dealImage,index)=>(
+            <div key={index}>
+              <img className='w-full h-auto' src={dealImage} alt={`Banner ${index+1}`}/>
             </div>
-            <Button className="ml-2 mt-2" gradientDuoTone="pinkToOrange">Order Now</Button>
+          ))
+        }
+        </Carousel>
+            <div>
+              <BsStars className='text-orange-500 mx-auto mt-2 text-2xl'/>
+              <p className='text-center text-xl md:text-2xl p-2 md:p-1 font-dancing'>
+              Exclusive Deals of the Day: Unbeatable Prices, Just for You!
+              </p>
+            </div>
           </div>
           <div className="flex flex-col gap-4 mt-4 md:mt-0 bg-gray-300">
             <h2 className="p-5 text-lg font-semibold">POPULAR PRODUCT</h2>
@@ -224,7 +219,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
       {/* ads section */}
