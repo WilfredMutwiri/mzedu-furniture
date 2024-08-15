@@ -35,3 +35,6 @@
 .dashboard_li{
   @apply bg-gray-700 p-2 rounded-md cursor-pointer hover:bg-gray-200 flex gap-2 hover:text-black
 }
+.contactNavli{
+  @apply flex gap-1 text-cyan-800 border-black pr-2 border-r-4
+}

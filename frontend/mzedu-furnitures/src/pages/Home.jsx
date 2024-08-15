@@ -405,10 +405,13 @@ export default function Home() {
       </section>
       {/* New Arrivals Section */}
       <section>
-        <div className={`mt-5 w-56 m-auto border-black border-t-4 border-b-4 `}>
-        <h2 className='text-center font-dancing text-3xl p-2'>New Arrivals</h2>
+      <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
+        <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>New Arrivals</h2>
+        <Link to="/newArrivals">
+        <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
+        </Link>
         </div>
-        <div className='w-11/12 mx-auto p-3 sm:text-sm'>
+        <div className='w-11/12 mx-auto p-3 sm:text-sm mt-1'>
           <p className='leading-relaxed'>
           Discover the elegance in every detail with our latest furniture arrivals, where timeless design meets modern comfort. Elevate your space with pieces that inspire and invite warmth into your home. Embrace the perfect blend of style and function, crafted to make every moment unforgettable.
           </p>

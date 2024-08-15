@@ -4,6 +4,14 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { Button, Navbar } from "flowbite-react";
 import { Link } from 'react-router-dom';
+import { FaPhone } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoTime } from "react-icons/io5";
+import { FaFacebook } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FaWhatsapp } from "react-icons/fa";
+
+
 export default function NavBar() {
   let adText=["..Just the best..","..Get quality furniture at an affordable price..","..We offer free delivery.."]
   const [newText,setNewText]=useState(0)
@@ -17,8 +25,27 @@ export default function NavBar() {
     return ()=>clearInterval=(interval)
   },[])
   return (
-    <div className='relative z-50'>
-      <Navbar fluid rounded className='bg-gray-100'>
+    <div className='relative z-50 bg-gray-50'>
+      {/* contacts nav */}
+      <div className='p-3 hidden md:flex text-sm w-10/12 mx-auto'>
+        <div>
+          <ul className='flex gap-4'>
+            <li className='contactNavli'><FaPhone className='text-xl text-green-600'/> +2547 000 000 / +2547 000 000</li>
+            <li className='contactNavli'><FaLocationDot className='text-xl text-green-600'/> Kwale County, Diani-Ukunda, Nyumba-Tatu Area</li>
+            <li className='contactNavli'><IoTime className='text-xl text-green-600'/>24Hr Customer Support</li>
+          </ul>
+        </div>
+        <div className='pl-2 flex gap-2'>
+          <h2 className='text-cyan-800'>Follow us</h2>
+          <ul className='flex gap-2'>
+            <li><FaFacebook/></li>
+            <li><RiTwitterXFill/></li>
+            <li><FaWhatsapp/></li>
+          </ul>
+        </div>
+      </div>
+      <hr/>
+      <Navbar fluid rounded className='bg-gray-50'>
     <Navbar.Brand gradientDuoTone="pinkToOrange">
       <img className='w-8' src={logo}/>
       <span className="pl-2 text-pink-800 self-center whitespace-nowrap text-2xl md:text-3xl dark:text-white font-dancing">Mzedu Furniture</span>
@@ -34,7 +61,7 @@ export default function NavBar() {
         HOME
       </Navbar.Link>
       <Navbar.Link href="/featuredProducts">FEATURED</Navbar.Link>
-      <Navbar.Link href="#">NEW ARRIVALS</Navbar.Link>
+      <Navbar.Link href="/newArrivals">NEW ARRIVALS</Navbar.Link>
       <Navbar.Link href="#">LIVING ROOM</Navbar.Link>
       <Navbar.Link href="#">DINING</Navbar.Link>
       <Navbar.Link href="#">BEDROOM</Navbar.Link>
