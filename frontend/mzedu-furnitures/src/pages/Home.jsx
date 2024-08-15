@@ -42,6 +42,13 @@ import Arrival2 from '../images/Arrival2.jpeg'
 import Arrival3 from '../images/Arrival3.jpeg'
 import Arrival4 from '../images/Arrival4.jpeg'
 import Arrival5 from '../images/Arrival5.jpeg'
+// living room
+import livingRoom1 from '../images/living Room/living room 1.webp'
+import livingRoom2 from '../images/living Room/living room 2.webp'
+import livingRoom3 from '../images/living Room/living room 3.webp'
+import livingRoom4 from '../images/living Room/living room 4.webp'
+import livingRoom5 from '../images/living Room/living room 5.webp'
+
 
 import { useState,useEffect } from 'react'
 import { Button,Rating } from 'flowbite-react'
@@ -479,6 +486,101 @@ export default function Home() {
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
               <h2 className='text-sm font-semibold'>WALL DECO</h2>
+              <h3 className='line-through text-sm'>Ksh. 25,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr/>
+      <div className=' text-white bg-cyan-700 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
+              <p className='text-center leading-relaxed font-semibold text-lg'>
+                WE OFFER FREE DELIVERY FOR PURCHASES AROUND DIANI-UKUNDA
+              </p>
+              <h2 className='text-center'>
+              *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
+              </h2>
+            </div>
+      {/* Living room section */}
+      <section>
+      <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
+        <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Living Room Elegance</h2>
+        <Link to="/newArrivals">
+        <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
+        </Link>
+        </div>
+        <div className='w-11/12 mx-auto p-3 sm:text-sm mt-1'>
+          <p className='leading-relaxed'>
+          Step into Living Room Elegance, where comfort meets style in every corner. Discover timeless pieces that transform your space into a sanctuary of sophistication. Elevate your home with designs crafted to inspire and impress.
+          </p>
+        </div>
+        <div className={`w-11/12 m-auto pt-5 pb-5 hidden md:flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        {/* first livingRoomImg */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom1}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>French Sofas</h2>
+              <h3 className='line-through text-sm'>Ksh. 14,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 24,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* second livingroom Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom2}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>3-set Sofas</h2>
+              <h3 className='line-through text-sm'>Ksh. 22,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* thid livingRoom Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom3}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Reeds Table</h2>
+              <h3 className='line-through text-sm'>Ksh. 12,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 10,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* fourth livingRoomImg */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom4}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Coffee Table</h2>
+              <h3 className='line-through text-sm'>Ksh.7,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 2,300</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+{/* fifth livingRoom Img*/}
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Africana Sofas</h2>
               <h3 className='line-through text-sm'>Ksh. 25,000</h3>
               </div>
               <div>
