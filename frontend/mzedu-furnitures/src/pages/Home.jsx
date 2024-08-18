@@ -1,12 +1,10 @@
 import React, { useRef } from 'react'
-import {Label } from "flowbite-react";
+import {Label, Textarea, TextInput } from "flowbite-react";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Carousel } from 'react-responsive-carousel';
 import { BsStars } from "react-icons/bs";
 import { BiShoppingBag, BiSolidPurchaseTagAlt } from "react-icons/bi";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css"; 
 
 import banner2 from '../images/banner2.jpg'
 import banner1 from '../images/banner1.jpg'
@@ -19,7 +17,6 @@ import popular1 from '../images/popular1.jpeg'
 import popular2 from '../images/popular2.jpeg'
 import popular3 from '../images/officeDesk1.jpeg'
 
-import newSign from '../images/sign.png'
 import dinningTable2 from '../images/dinningTable2.jpeg'
 import bedsAd from '../images/bedsAds.png'
 import diningAd from '../images/diningAd.jpg'
@@ -76,6 +73,7 @@ import testimoner3 from '../images/testimoner3.jfif'
 import { useState,useEffect } from 'react'
 import { Button,Rating } from 'flowbite-react'
 import { Link } from 'react-router-dom';
+import contactUsImg from '../images/contactUs.svg'
 export default function Home() {
   const images=[banner1,banner2,banner3,banner4,banner5];
   const [currentImage,setCurrentImage]=useState(0)
@@ -882,7 +880,7 @@ export default function Home() {
       <div className='w-11/12 mx-auto h-auto'>
       <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
       {/* first testi */}
-      <div className={` bg-gray-300 w-96 mx-auto h-auto p-3 rounded-md leading-relaxed shadow-sm shadow-blue-500 hidden md:block`}>
+      <div className={` bg-gray-300 w-96 mx-auto h-auto p-3 rounded-md leading-relaxed shadow-sm shadow-blue-500`}>
         <img src={testimoner3} className='w-10 h-16 object-contain rounded-full mx-auto' alt="" />
           <div className='flex gap-4 justify-center m-auto pt-2 pb-2'>
           <Rating>
@@ -943,6 +941,57 @@ export default function Home() {
         </div>
         </section>
         {/* contact us section */}
+        <section>
+          <div className='w-11/12 mx-auto block md:flex gap-6 pt-10 pb-5'>
+          <div className='flex-1'>
+            <h2 className='text-xl'>Do You have any question or would like to know more about us?</h2>
+            <h3 className='text-lg text-center pb-4'>We'd love to hear from you!</h3>
+            <img src={contactUsImg} className='h-80 w-full mx-auto'/>
+          </div>
+          <div className='flex-1'>
+            <form className=' flex flex-col gap-4 mt-4'>
+              <div className='flex gap-4'>
+                <div className='flex-1'>
+                <Label>First Name</Label>
+                <TextInput
+                type='text'
+                required
+                placeholder='Your First Name'/>
+                </div>
+                <div className='flex-1'>
+                <Label>Last Name</Label>
+                <TextInput
+                required
+                placeholder='Your Last Name'
+                type='text'/>
+                </div>
+              </div>
+              <div className='flex gap-4'>
+                <div className='flex-1'>
+                <Label>Email</Label>
+                <TextInput 
+                type='email'
+                required
+                placeholder='Your Email Address'/>
+                </div>
+                <div className='flex-1'>
+                <Label>Phone Number</Label>
+                <TextInput 
+                type='text'
+                required
+                placeholder='+254 700 000 000'
+                />
+                </div>
+              </div>
+              <Textarea
+              placeholder='Hello Mzedu furniture, I would like to ...'
+              required
+              className='h-52'/>
+            </form>
+            <Button className='w-full mt-4' gradientDuoTone="pinkToOrange" outline>Send Message</Button>
+          </div>
+          </div>
+        </section>
       </div>
   )
 }
