@@ -5,6 +5,8 @@ import { FaCartArrowDown } from "react-icons/fa";
 import { Carousel } from 'react-responsive-carousel';
 import { BsStars } from "react-icons/bs";
 import { BiShoppingBag, BiSolidPurchaseTagAlt } from "react-icons/bi";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
 
 import banner2 from '../images/banner2.jpg'
 import banner1 from '../images/banner1.jpg'
@@ -67,7 +69,10 @@ import outdoor2 from '../images/outdoor/outdoor2.webp'
 import outdoor3 from '../images/outdoor/outdoor3.webp'
 import outdoor4 from '../images/outdoor/outdoor4.webp'
 import outdoor5 from '../images/outdoor/outdoor5.webp'
-
+// testimoners
+import testimoner from '../images/testimoner.jpeg'
+import testimoner2 from '../images/testimoner2.jpg'
+import testimoner3 from '../images/testimoner3.jfif'
 import { useState,useEffect } from 'react'
 import { Button,Rating } from 'flowbite-react'
 import { Link } from 'react-router-dom';
@@ -95,30 +100,6 @@ export default function Home() {
   const featuredImagesPrice=['10,500','12,500','8,900','6,300','8300',"14500","20,500","9,900","26,300","8,300"]
   const imagePrices=['20,000','16,000','28,500']
   const decorImages=[Decor1,Decor2]
-
-  // testimonies section
-  const testimonies=[
-  "Mzedu Furniture & Deco have a remarkable attention to detail skillset.I just purchased a sofa set from then and I still can't beleive the awesome appearance of my living room. Thank you!",
-  "Mzedu furniture and Deco never disappoints. Their executive desks and chairs turned my office into a sophisticated workspace. Their wide selection and commitment to excellence and perfection make them the go-to for furniture in Kenya.","I rely on Mzedu furniture and Deco to bring my visions to life. Their collection allows me to create bespoke spaces that exude sophistication. Their dedication toquality craftsmanship and timeless design is amazing."]
-  const [currentTestimoner,setCurrentTestimoner]=useState(0);
-  const [currentTestimony,setCurrentTestimony]=useState(0);
-  const testimoners=['Margaret Kiani','John Kimani','Judy Mwende'];
-  const changeTestimony=(direction)=>{
-    setCurrentTestimony((prevTestimony)=>{
-      if(direction==="prev"){
-        return prevTestimony===0?testimonies.length-1:prevTestimony-1;
-      }else{
-        return prevTestimony===testimonies.length-1?0:prevTestimony+1;
-      }
-    });
-    setCurrentTestimoner((prevTestimoner)=>{
-      if(direction==="prev"){
-        return prevTestimoner===0?testimoners.length-1:prevTestimoner-1;
-      }else{
-        return prevTestimoner===testimoners.length-1?0:prevTestimoner+1;
-      }
-    });
-  }
 
 // deals section
   const changedealImage=(direction)=>{
@@ -155,6 +136,7 @@ export default function Home() {
       })
       }
       const homeBannerImages=[banner1,banner2,banner3]
+
   return (
     <div >
       <div className='max-w-[1400px] h-[780px] w-full m-auto'>
@@ -895,60 +877,19 @@ export default function Home() {
       </section>
       {/* testimonies section */}
       <hr className='w-11/12 m-auto' />
-      <section>
-      <h2 className={`text-center font-Dancing text-2xl md:text-3xl pt-6 md:pt-10 pb-6 md:pb-10`}>~What Our Customers Have To Say~</h2>
-        <div className='w-11/12 flex gap-6 m-auto pb-10'>
-          <div className={`bg-gray-300 p-3 rounded-md leading-relaxed shadow-sm shadow-blue-500`}>
-            <div className='flex gap-4 justify-center m-auto pt-2 pb-2'>
-            <Rating>
-            <Rating.Star className='text-red-600' />
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-white' filled={false} />
-            </Rating>
-            </div>
-            <p>{testimonies[currentTestimony]}</p>
-            <h2 className='font-semibold'>@{testimoners[currentTestimoner]}<span className='font-normal pl-2 text-blue-600 hidden md:block'>/Facebook</span></h2>
-            <div className='flex md:hidden justify-between pt-5'>
-            <Button className='h-10 my-auto w-14' onClick={()=>changeTestimony('prev')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-auto h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-            </Button>
-            <Button className='h-10 my-auto w-14' onClick={()=>changeTestimony('next')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-            </Button>
-            </div>
-          </div>
-          <div className={`bg-gray-300 p-3 rounded-md leading-relaxed shadow-sm shadow-blue-500 hidden md:block`}>
+      <section className='bg-gray-100'>
+      <h2 className={`text-center font-dancing text-2xl md:text-3xl pt-6 md:pt-10 pb-6 md:pb-10`}>~What Our Customers Have To Say~</h2>
+      <div className='w-11/12 mx-auto h-auto'>
+      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
+      {/* first testi */}
+      <div className={` bg-gray-300 w-96 mx-auto h-auto p-3 rounded-md leading-relaxed shadow-sm shadow-blue-500 hidden md:block`}>
+        <img src={testimoner3} className='w-10 h-16 object-contain rounded-full mx-auto' alt="" />
           <div className='flex gap-4 justify-center m-auto pt-2 pb-2'>
           <Rating>
-            <Rating.Star className='text-red-600' />
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600' />
-            </Rating>
-            </div>
-            <p>
-            Mzedu furniture and Deco never disappoints. Their executive desks and chairs turned my office into a sophisticated
-            workspace. Their wide selection and commitment to excellence and perfection make them
-            the go-to for furniture in Kenya.
-            </p>
-            <h2 className='font-semibold pt-7'>John Kimani/<span className='font-normal pl-2 text-blue-600'>Instagram</span></h2>
-          </div>
-          <div className={` bg-gray-300 p-3 rounded-md leading-relaxed shadow-sm shadow-blue-500 hidden md:block`}>
-          <div className='flex gap-4 justify-center m-auto pt-2 pb-2'>
-          <Rating>
-            <Rating.Star className='text-red-600' />
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600'/>
-            <Rating.Star className='text-red-600'/>
+            <Rating.Star className='text-yellow-400' />
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-yellow-400'/>
             <Rating.Star className='text-white' filled={false}/>
             <Rating.Star className='text-white' filled={false} />
             </Rating>
@@ -958,10 +899,50 @@ export default function Home() {
             me to create bespoke spaces that exude sophistication. Their dedication to
             quality craftsmanship and timeless design is amazing.
             </p>
-            <h2 className='font-semibold'>Judy Mwende/ <span className='font-normal pl-2 text-blue-600'>Facebook</span></h2>
+            <h2 className='font-semibold'>Wilfred Mutwiri/ <span className='font-normal pl-2 text-blue-600'>Facebook</span></h2>
           </div>
+          {/* second testi */}
+          <div className={`bg-gray-300 w-96 h-auto mx-auto p-3 rounded-md leading-relaxed shadow-sm shadow-blue-500 hidden md:block`}>
+          <img src={testimoner2} className='w-10 rounded-full h-16 object-contain mx-auto' alt="" />
+          <div className='flex gap-4 justify-center m-auto pt-2 pb-2'>
+          <Rating>
+            <Rating.Star className='text-yellow-400' />
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-yellow-400' />
+            </Rating>
+            </div>
+            <p>
+            Mzedu furniture and Deco never disappoints. Their executive desks and chairs turned my office into a sophisticated
+            workspace. Their wide selection and commitment to excellence and perfection make them
+            the go-to for furniture in Kenya.
+            </p>
+            <h2 className='font-semibold pt-7'>John Doe/<span className='font-normal pl-2 text-blue-600'>Instagram</span></h2>
+          </div>
+          {/* third testi */}
+          <div className={` bg-gray-300 w-96 h-auto mx-auto p-3 rounded-md leading-relaxed shadow-sm shadow-blue-500 hidden md:block`}>
+          <img src={testimoner} className='w-10 rounded-full h-16 object-contain mx-auto' alt="" />
+          <div className='flex gap-4 justify-center m-auto pt-2 pb-2'>
+          <Rating>
+            <Rating.Star className='text-yellow-400' />
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-yellow-400'/>
+            <Rating.Star className='text-white' filled={false}/>
+            <Rating.Star className='text-white' filled={false} />
+            </Rating>
+            </div>
+            <p>
+            Mzedu Furniture & Deco have a remarkable attention to detail skillset.I just purchased a sofa set from then and I still can't beleive the awesome appearance of my living room. Thank you!
+            </p>
+            <h2 className='font-semibold'>Elias Kimani/ <span className='font-normal pl-2 text-blue-600'>Facebook</span></h2>
+          </div>
+        </Carousel>
         </div>
-      </section>
+        </section>
+        {/* contact us section */}
       </div>
   )
 }

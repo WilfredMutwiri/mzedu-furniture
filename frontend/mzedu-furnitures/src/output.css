@@ -1446,6 +1446,10 @@ input[type="range"]::-ms-fill-lower{
   height: 2.5rem;
 }
 
+.h-16{
+  height: 4rem;
+}
+
 .h-2{
   height: 0.5rem;
 }
@@ -1545,6 +1549,10 @@ input[type="range"]::-ms-fill-lower{
 
 .h-screen{
   height: 100vh;
+}
+
+.h-14{
+  height: 3.5rem;
 }
 
 .max-h-\[90dvh\]{
@@ -1653,6 +1661,10 @@ input[type="range"]::-ms-fill-lower{
 
 .w-9{
   width: 2.25rem;
+}
+
+.w-96{
+  width: 24rem;
 }
 
 .w-auto{
@@ -2699,11 +2711,6 @@ input[type="range"]::-ms-fill-lower{
 .bg-yellow-600{
   --tw-bg-opacity: 1;
   background-color: rgb(159 88 10 / var(--tw-bg-opacity));
-}
-
-.bg-cyan-800{
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 94 117 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50{
@@ -4016,6 +4023,12 @@ input[type="range"]::-ms-fill-lower{
 .even\:bg-gray-50:nth-child(even){
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.hover\:scale-110:hover{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:cursor-not-allowed:hover{
@@ -6129,11 +6142,6 @@ input[type="range"]::-ms-fill-lower{
   .sm\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .sm\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .sm\:text-xs{
