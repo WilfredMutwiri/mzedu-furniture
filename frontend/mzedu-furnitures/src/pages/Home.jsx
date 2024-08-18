@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Carousel } from 'react-responsive-carousel';
 import { BsStars } from "react-icons/bs";
-import { BiSolidPurchaseTagAlt } from "react-icons/bi";
+import { BiShoppingBag, BiSolidPurchaseTagAlt } from "react-icons/bi";
 
 import banner2 from '../images/banner2.jpg'
 import banner1 from '../images/banner1.jpg'
@@ -61,6 +61,12 @@ import bed2 from '../images/bed room/bed2.webp'
 import bed3 from '../images/bed room/bed3.webp'
 import bed4 from '../images/bed room/bed4.webp'
 import bed5 from '../images/bed room/bed5.webp'
+// outdoor
+import outdoor1 from '../images/outdoor/outdoor1.webp'
+import outdoor2 from '../images/outdoor/outdoor2.webp'
+import outdoor3 from '../images/outdoor/outdoor3.webp'
+import outdoor4 from '../images/outdoor/outdoor4.webp'
+import outdoor5 from '../images/outdoor/outdoor5.webp'
 
 import { useState,useEffect } from 'react'
 import { Button,Rating } from 'flowbite-react'
@@ -707,6 +713,7 @@ export default function Home() {
               *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
               </h2>
             </div>
+            {/* bedroom section */}
             <section>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Serenity Haven</h2>
@@ -786,6 +793,100 @@ export default function Home() {
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 17,500</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className=' text-white bg-green-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
+      <BiShoppingBag className='text-xl md:text-3xl'/>
+              <p className='text-center leading-relaxed font-semibold text-lg'>
+                WE HAVE ALL YOU NEED...LOOK NO FURTHER, SHOP WITH US TODAY!
+              </p>
+              <h2 className='text-center'>
+              *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
+              </h2>
+            </div>
+            <section>
+      <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
+        <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Breezescape</h2>
+        <Link to="/newArrivals">
+        <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
+        </Link>
+        </div>
+        <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
+          <p className='leading-relaxed'>
+          Transform your outdoor space into a serene retreat with our Breezescape collection. Discover elegantly crafted furniture designed to bring comfort and style to your open-air oasis.
+          </p>
+        </div>
+        <div className={`w-11/12 m-auto pt-5 pb-5 flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        {/* first outdoorImg */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={outdoor1}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Silk Tent(Red)</h2>
+              <h3 className='line-through text-sm'>Ksh. 8,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 6,500</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* second outdoor Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={outdoor2}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Stand Tent K2V</h2>
+              <h3 className='line-through text-sm'>Ksh. 16,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 14,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* thid outdoor Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={outdoor3}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Stand Tent C02</h2>
+              <h3 className='line-through text-sm'>Ksh. 16,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 14,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* fourth outdoorImg */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={outdoor4}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Silk Tent(Blue)</h2>
+              <h3 className='line-through text-sm'>Ksh.8,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 6,500</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+{/* fifth diningRoom Img*/}
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={outdoor5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Table Shade</h2>
+              <h3 className='line-through text-sm'>Ksh. 6,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 5,500</h3>
               <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
               </div>
             </div>
