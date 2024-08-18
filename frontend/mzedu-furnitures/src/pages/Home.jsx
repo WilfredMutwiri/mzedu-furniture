@@ -55,7 +55,12 @@ import dining2 from '../images/dining room/dining 2.webp'
 import dining3 from '../images/dining room/dining 3.webp'
 import dining4 from '../images/dining room/dining 4.webp'
 import dining5 from '../images/dining room/dining 5.webp'
-
+// bedroom 
+import bed1 from '../images/bed room/bed1.webp'
+import bed2 from '../images/bed room/bed2.webp'
+import bed3 from '../images/bed room/bed3.webp'
+import bed4 from '../images/bed room/bed4.webp'
+import bed5 from '../images/bed room/bed5.webp'
 
 import { useState,useEffect } from 'react'
 import { Button,Rating } from 'flowbite-react'
@@ -702,6 +707,91 @@ export default function Home() {
               *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
               </h2>
             </div>
+            <section>
+      <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
+        <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Serenity Haven</h2>
+        <Link to="/newArrivals">
+        <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
+        </Link>
+        </div>
+        <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
+          <p className='leading-relaxed'>
+          Welcome to Serenity Haven, where every detail is designed for restful nights and peaceful mornings. Discover bedroom furniture that transforms your space into a sanctuary of comfort and style.
+          </p>
+        </div>
+        <div className={`w-11/12 m-auto pt-5 pb-5 flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        {/* first bedRoomImg */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={bed1}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Queen Medium</h2>
+              <h3 className='line-through text-sm'>Ksh. 10,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 8,500</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* second bedroom Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={bed2}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Queen Large</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 18,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* thid bedRoom Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={bed3}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>King Medium</h2>
+              <h3 className='line-through text-sm'>Ksh. 10,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 9,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* fourth bedRoomImg */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={bed4}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>King Large</h2>
+              <h3 className='line-through text-sm'>Ksh.20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 16,300</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+{/* fifth diningRoom Img*/}
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>King X0D Large</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 17,500</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* testimonies section */}
       <hr className='w-11/12 m-auto' />
       <section>
