@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Carousel } from 'react-responsive-carousel';
 import { BsStars } from "react-icons/bs";
+import { BiSolidPurchaseTagAlt } from "react-icons/bi";
 
 import banner2 from '../images/banner2.jpg'
 import banner1 from '../images/banner1.jpg'
@@ -48,6 +49,12 @@ import livingRoom2 from '../images/living Room/living room 2.webp'
 import livingRoom3 from '../images/living Room/living room 3.webp'
 import livingRoom4 from '../images/living Room/living room 4.webp'
 import livingRoom5 from '../images/living Room/living room 5.webp'
+// dining room
+import dining1 from '../images/dining room/dining 1.webp'
+import dining2 from '../images/dining room/dining 2.webp'
+import dining3 from '../images/dining room/dining 3.webp'
+import dining4 from '../images/dining room/dining 4.webp'
+import dining5 from '../images/dining room/dining 5.webp'
 
 
 import { useState,useEffect } from 'react'
@@ -312,8 +319,8 @@ export default function Home() {
       <hr className='w-10/12 m-auto'/>
       <section>
         <div className='w-11/12 pt-10 m-auto'>
-          <h2 className='text-3xl font-Dancing text-center pb-10'>Your choice,Our command!</h2>
-          <p className='leading-relaxed pb-5'>
+          <h2 className='text-3xl font-Dancing text-center pb-5'>Your choice,Our command!</h2>
+          <p className='leading-relaxed pb-5 text-sm md:text-lg'>
           At Mzedu Furniture & Deco, we offer an extensive selection of furniture, 
           ranging from cool and captivating accents to eye-catching centrepieces, we ensure that you
           find everything necessary to shape your dream home. We understand that your living space
@@ -337,7 +344,7 @@ export default function Home() {
           <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
           {/* Grid 1 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
-          <div className=''>
+          <div className='' id='decor'>
             <img className='w-40 md:w-52 h-[155px] object-fill' src={featured1}/>
             <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Gamming Chair</h2>
@@ -345,7 +352,7 @@ export default function Home() {
             <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
             </div>
           </div>
-          <div className=''>
+          <div className='' id='decor'>
           <img className='w-40 md:w-52 h-[155px] object-fill' src={featured2}/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Outdoor Shade</h2>
@@ -356,7 +363,7 @@ export default function Home() {
           </div>
           {/* grid 2 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
-          <div>
+          <div id='decor'>
           <img className='w-40 md:w-52 h-[155px] object-cover' src={featured3}/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Rounded Table</h2>
@@ -365,7 +372,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div id='decor'>
           <img className='w-40 md:w-52 h-[155px] object-cover' src={featured4}/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Flower Holder</h2>
@@ -376,7 +383,7 @@ export default function Home() {
           </div>
           {/* grid 3 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
-          <div>
+          <div id='decor'>
           <img className='w-40 md:w-52 h-[155px] object-fill' src={featured5}/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Flower Grid</h2>
@@ -384,7 +391,7 @@ export default function Home() {
             <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
             </div>
           </div>
-          <div className=''>
+          <div className='' id='decor'>
             <img className='w-40 md:w-52 h-[155px] object-fill' src={featured6}/>
             <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Office Desk</h2>
@@ -418,14 +425,14 @@ export default function Home() {
         <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
         </Link>
         </div>
-        <div className='w-11/12 mx-auto p-3 sm:text-sm mt-1'>
+        <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
           <p className='leading-relaxed'>
           Discover the elegance in every detail with our latest furniture arrivals, where timeless design meets modern comfort. Elevate your space with pieces that inspire and invite warmth into your home. Embrace the perfect blend of style and function, crafted to make every moment unforgettable.
           </p>
         </div>
-        <div className={`w-11/12 m-auto pt-5 pb-5 hidden md:flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
         {/* first arrival */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival1}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -439,7 +446,7 @@ export default function Home() {
             </div>
           </div>
           {/* second arrival */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival2}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -453,7 +460,7 @@ export default function Home() {
             </div>
           </div>
           {/* third arrival */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival3}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -467,7 +474,7 @@ export default function Home() {
             </div>
           </div>
           {/* fourth arrival */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival4}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -481,7 +488,7 @@ export default function Home() {
             </div>
           </div>
 {/* fifth arrival */}
-<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival5}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -513,14 +520,14 @@ export default function Home() {
         <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
         </Link>
         </div>
-        <div className='w-11/12 mx-auto p-3 sm:text-sm mt-1'>
+        <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
           <p className='leading-relaxed'>
           Step into Living Room Elegance, where comfort meets style in every corner. Discover timeless pieces that transform your space into a sanctuary of sophistication. Elevate your home with designs crafted to inspire and impress.
           </p>
         </div>
-        <div className={`w-11/12 m-auto pt-5 pb-5 hidden md:flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        <div className={`w-11/12 m-auto pt-5 pb-5 flex gap-6 transition-opacity duration-100`} id='visibleBig'>
         {/* first livingRoomImg */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom1}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -534,7 +541,7 @@ export default function Home() {
             </div>
           </div>
           {/* second livingroom Img */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom2}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -548,7 +555,7 @@ export default function Home() {
             </div>
           </div>
           {/* thid livingRoom Img */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom3}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -562,7 +569,7 @@ export default function Home() {
             </div>
           </div>
           {/* fourth livingRoomImg */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom4}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -576,8 +583,8 @@ export default function Home() {
             </div>
           </div>
 {/* fifth livingRoom Img*/}
-<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]'>
-            <img className='w-52 h-[200px] object-fill' src={livingRoom5}/>
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
               <h2 className='text-sm font-semibold'>Africana Sofas</h2>
@@ -590,7 +597,111 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <hr/>
+      <div className=' text-white bg-red-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
+      <BiSolidPurchaseTagAlt className='text-xl md:text-3xl'/>
+              <p className='text-center leading-relaxed font-semibold text-lg'>
+                WHAT ARE YOU WAITING FOR? MAKE YOUR ORDER TODAY!
+              </p>
+              <h2 className='text-center'>
+              *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
+              </h2>
+            </div>
       </section>
+      {/* dining room section */}
+      <section>
+      <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
+        <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Dining Elegance</h2>
+        <Link to="/newArrivals">
+        <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
+        </Link>
+        </div>
+        <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
+          <p className='leading-relaxed'>
+          Step into Dining Elegance, where every meal becomes an occasion. Discover timeless pieces that blend style and comfort, creating the perfect ambiance for unforgettable gatherings.
+          </p>
+        </div>
+        <div className={`w-11/12 m-auto pt-5 pb-5 flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        {/* first diningRoomImg */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={dining1}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Africana Set</h2>
+              <h3 className='line-through text-sm'>Ksh. 24,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 24,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* second diningroom Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={dining2}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>French Set</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* thid diningRoom Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={dining3}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Coffee pub Orange</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 18,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* fourth diningRoomImg */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={dining4}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Blue Africana Set</h2>
+              <h3 className='line-through text-sm'>Ksh.27,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 25,300</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+{/* fifth diningRoom Img*/}
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Coffe Pub Gray</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 18,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className=' text-white bg-cyan-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
+              <p className='text-center leading-relaxed font-semibold text-lg'>
+                WE OFFER FREE DELIVERY FOR ABOVE 100,000!
+              </p>
+              <h2 className='text-center'>
+              *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
+              </h2>
+            </div>
       {/* testimonies section */}
       <hr className='w-11/12 m-auto' />
       <section>

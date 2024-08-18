@@ -10,6 +10,7 @@ import { IoTime } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 
 export default function NavBar() {
@@ -27,20 +28,21 @@ export default function NavBar() {
   return (
     <div className='relative z-50 bg-gray-50'>
       {/* contacts nav */}
-      <div className='p-3 hidden md:flex text-sm w-10/12 mx-auto'>
+      <div className='p-3 hidden md:flex text-sm w-11/12 mx-auto'>
         <div>
           <ul className='flex gap-4'>
             <li className='contactNavli'><FaPhone className='text-xl text-green-600'/> +2547 000 000 / +2547 000 000</li>
             <li className='contactNavli'><FaLocationDot className='text-xl text-green-600'/> Kwale County, Diani-Ukunda, Nyumba-Tatu Area</li>
             <li className='contactNavli'><IoTime className='text-xl text-green-600'/>24Hr Customer Support</li>
+            <li className='contactNavli'><MdOutlineEmail className='text-xl text-green-600'/>mzedufurniture@gmail.com</li>
           </ul>
         </div>
         <div className='pl-2 flex gap-2'>
           <h2 className='text-cyan-800'>Follow us</h2>
           <ul className='flex gap-2'>
-            <li><FaFacebook/></li>
-            <li><RiTwitterXFill/></li>
-            <li><FaWhatsapp/></li>
+            <li><FaFacebook className='w-5 h-5'/></li>
+            <li><RiTwitterXFill className='w-5 h-5'/></li>
+            <li><FaWhatsapp className='w-5 h-5'/></li>
           </ul>
         </div>
       </div>
