@@ -279,25 +279,17 @@ export default function Home() {
           </a>
         </div>
         </div>
-
-        <div className="w-10/12 m-auto block md:hidden -mt-8 md:-mt-0">
-              <div className="flex gap-2 pt-10 pb-10 m-auto ">
-                <Button className='h-10 my-auto w-6' onClick={()=>changedecorImage('prev')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-auto h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-                </Button>
-                <div id='decor'>
-                <img className='w-60 h-60 object-contain mx-auto' src={decorImages[decorImage]}/>
+        <div className="w-10/12 mx-auto block md:hidden mb-4">
+        <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
+        <div id='decor'>
+                <img className='w-60 h-60 object-contain mx-auto' src={Decor1}/>
                 </div>
-                <Button className='h-10 my-auto w-6' onClick={()=>changedecorImage('next')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-                </Button>
-              </div>
+                <div id='decor'>
+                <img className='w-60 h-60 object-contain mx-auto' src={Decor1}/>
+                </div>
+        </Carousel>
             </div>
-            <div className='text-white bg-teal-900 p-6 w-11/12 m-auto Wmb-5 -mt-14 md:mt-5 mb-10'>
+            <div className='text-white bg-teal-900 p-6 w-11/12 m-auto Wmb-5 md:mt-5 mb-10'>
               <p className='text-center leading-relaxed font-semibold text-lg'>
                 SAVE UP TO 25% OFF SOFAS!
               </p>
@@ -413,7 +405,7 @@ export default function Home() {
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>New Arrivals</h2>
         <Link to="/newArrivals">
-        <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
+        <Label className=' right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
         </Link>
         </div>
         <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
@@ -422,8 +414,9 @@ export default function Home() {
           </p>
         </div>
         <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
-        {/* first arrival */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+            {/* first arrival */}
+            <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival1}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -436,8 +429,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* second arrival */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            {/* second arrival */}
+            <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival2}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -451,7 +444,9 @@ export default function Home() {
             </div>
           </div>
           {/* third arrival */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
+        <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival3}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -464,8 +459,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* fourth arrival */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            {/* fourth arrival */}
+            <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival4}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -478,7 +473,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-{/* fifth arrival */}
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-2' id='grid3'>
+          {/* fifth arrival */}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival5}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
@@ -492,7 +489,24 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={Arrival5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>WALL DECO</h2>
+              <h3 className='line-through text-sm'>Ksh. 25,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
         </div>
+        </div>
+        <Link to="/featuredProducts"> 
+        <Button className='mt-6 mb-2 w-40 mx-auto md:hidden' gradientDuoTone="pinkToOrange">Browse More <span><FaArrowRight className='ml-2 text-xl'/></span></Button>
+        </Link>
       </section>
       <hr/>
       <div className=' text-white bg-cyan-700 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
