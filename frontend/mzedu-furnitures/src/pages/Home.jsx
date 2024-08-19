@@ -326,13 +326,13 @@ export default function Home() {
           {/* first features products div */}
           <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
           {/* Grid 1 */}
-          <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+          <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={featured1}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Gamming Chair</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              <div className='text-xs md:text-sm'>
+              <h2 className=' font-semibold'>Gamming Chair</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 10,500</h3>
@@ -340,12 +340,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300  h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={featured2}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Outdoor Shade</h2>
-              <h3 className='line-through text-sm'>Ksh. 12,500</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2 text-xs md:text-sm'>
+              <div className='text-xs md:text-sm'>
+              <h2 className=' font-semibold'>Outdoor Shade</h2>
+              <h3 className='line-through'>Ksh. 12,500</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
@@ -356,13 +356,13 @@ export default function Home() {
 
           </div>
           {/* grid 2 */}
-          <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0'>
+          <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0'>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={featured3}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Rounded Table (set)</h2>
-              <h3 className='line-through text-sm'>Ksh. 8,900</h3>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Rounded Table (set)</h2>
+              <h3 className='line-through'>Ksh. 8,900</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
@@ -373,7 +373,7 @@ export default function Home() {
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={featured4}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
+              <div className='text-xs md:text-sm'>
               <h2 className='text-sm font-semibold'>Flower Holder (set)</h2>
               <h3 className='line-through text-sm'>Ksh. 6,300</h3>
               </div>
@@ -385,13 +385,13 @@ export default function Home() {
           </div>
           </div>
           {/* grid 3 */}
-          <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0'>
+          <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0'>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={featured5}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Flower Grid (Love)</h2>
-              <h3 className='line-through text-sm'>Ksh. 8,300</h3>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Flower Grid (Love)</h2>
+              <h3 className='line-through'>Ksh. 8,300</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
@@ -402,9 +402,9 @@ export default function Home() {
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={featured6}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Office Desk M2R</h2>
-              <h3 className='line-through text-sm'>Ksh. 14,500</h3>
+              <div className='text-xs md:text-sm'>
+              <h2 className=' font-semibold'>Office Desk M2R</h2>
+              <h3 className='line-through'>Ksh. 14,500</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
@@ -444,14 +444,14 @@ export default function Home() {
           </p>
         </div>
         <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
             {/* first arrival */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival1}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>DINING SET</h2>
-              <h3 className='line-through text-sm'>Ksh. 14,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Dining Set</h2>
+              <h3 className='line-through'>Ksh. 14,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 12,000</h3>
@@ -462,10 +462,10 @@ export default function Home() {
             {/* second arrival */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival2}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>TABLE SET</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className=' font-semibold'>Table Set</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
@@ -475,13 +475,13 @@ export default function Home() {
           </div>
           {/* third arrival */}
         </div>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
         <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival3}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>WALL CLOCK</h2>
-              <h3 className='line-through text-sm'>Ksh. 14,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className=' font-semibold'>Wall Clock</h2>
+              <h3 className='line-through'>Ksh. 14,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 10,000</h3>
@@ -492,10 +492,10 @@ export default function Home() {
             {/* fourth arrival */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival4}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>INFINITY CUP</h2>
-              <h3 className='line-through text-sm'>Ksh.7,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Infinity Cup</h2>
+              <h3 className='line-through'>Ksh.7,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 2,300</h3>
@@ -508,10 +508,10 @@ export default function Home() {
           {/* fifth arrival */}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>WALL DECO</h2>
-              <h3 className='line-through text-sm'>Ksh. 25,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className=' font-semibold'>Wall Deco</h2>
+              <h3 className='line-through'>Ksh. 25,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
@@ -521,10 +521,10 @@ export default function Home() {
           </div>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={Arrival5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>WALL DECO</h2>
-              <h3 className='line-through text-sm'>Ksh. 25,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>WALL DECO</h2>
+              <h3 className='line-through'>Ksh. 25,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
@@ -561,14 +561,14 @@ export default function Home() {
           </p>
         </div>
         <div className={"w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100"} id='visibleBig'>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
           {/* first livingRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom1}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>French Sofas</h2>
-              <h3 className='line-through text-sm'>Ksh. 14,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>French Sofas</h2>
+              <h3 className='line-through'>Ksh. 14,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 24,000</h3>
@@ -579,10 +579,10 @@ export default function Home() {
           {/* second livingroom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom2}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>3-Sofas</h2>
-              <h3 className='line-through text-sm'>Ksh. 22,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>3-Set Sofas</h2>
+              <h3 className='line-through'>Ksh. 22,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
@@ -591,14 +591,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
           {/* thid livingRoom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom3}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Reeds Table</h2>
-              <h3 className='line-through text-sm'>Ksh. 12,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Reeds Table</h2>
+              <h3 className='line-through'>Ksh. 12,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 10,000</h3>
@@ -609,10 +609,10 @@ export default function Home() {
           {/* fourth livingRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom4}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Coffee Table</h2>
-              <h3 className='line-through text-sm'>Ksh.7,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Coffee Table</h2>
+              <h3 className='line-through'>Ksh.7,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 2,300</h3>
@@ -625,10 +625,10 @@ export default function Home() {
           {/* fifth livingRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Africana Sofas</h2>
-              <h3 className='line-through text-sm'>Ksh. 25,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Africana Sofas</h2>
+              <h3 className='line-through'>Ksh. 25,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
@@ -639,10 +639,10 @@ export default function Home() {
           {/* fifth livingRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Africana Sofas</h2>
-              <h3 className='line-through text-sm'>Ksh. 25,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Africana Sofas</h2>
+              <h3 className='line-through'>Ksh. 25,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
@@ -680,14 +680,14 @@ export default function Home() {
           </p>
         </div>
         <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
         {/* first diningRoomImg */}
         <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={dining1}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Africana Set</h2>
-              <h3 className='line-through text-sm'>Ksh. 24,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Africana Set</h2>
+              <h3 className='line-through'>Ksh. 24,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 24,000</h3>
@@ -698,10 +698,10 @@ export default function Home() {
           {/* second diningroom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={dining2}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>French Set</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>French Set</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
@@ -710,14 +710,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
           {/* thid diningRoom Img */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={dining3}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Coffee pub</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Coffee pub</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 18,000</h3>
@@ -728,10 +728,10 @@ export default function Home() {
           {/* fourth diningRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={dining4}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Blue Africana</h2>
-              <h3 className='line-through text-sm'>Ksh.27,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Blue Africana</h2>
+              <h3 className='line-through'>Ksh.27,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 25,300</h3>
@@ -740,14 +740,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid3'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid3'>
           {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Coffe Pub</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Coffe Pub</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 18,000</h3>
@@ -758,10 +758,10 @@ export default function Home() {
           {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Coffe Pub</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Coffe Pub</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 18,000</h3>
@@ -798,14 +798,14 @@ export default function Home() {
           </p>
         </div>
         <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100`} id='visibleBig'>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
         {/* first bedRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={bed1}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Queen Medium</h2>
-              <h3 className='line-through text-sm'>Ksh. 10,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Queen Medium</h2>
+              <h3 className='line-through'>Ksh. 10,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 8,500</h3>
@@ -816,10 +816,10 @@ export default function Home() {
           {/* second bedroom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={bed2}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Queen Large</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Queen Large</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 18,000</h3>
@@ -828,14 +828,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
           {/* thid bedRoom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={bed3}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>King Medium</h2>
-              <h3 className='line-through text-sm'>Ksh. 10,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>King Medium</h2>
+              <h3 className='line-through'>Ksh. 10,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 9,000</h3>
@@ -846,10 +846,10 @@ export default function Home() {
             {/* fourth bedRoomImg */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={bed4}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>King Large</h2>
-              <h3 className='line-through text-sm'>Ksh.20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>King Large</h2>
+              <h3 className='line-through'>Ksh.20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 16,300</h3>
@@ -858,14 +858,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid3'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid3'>
           {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>King Large</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>King Large</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 17,500</h3>
@@ -876,10 +876,10 @@ export default function Home() {
           {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>King Large</h2>
-              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>King Large</h2>
+              <h3 className='line-through'>Ksh. 20,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 17,500</h3>
@@ -917,14 +917,14 @@ export default function Home() {
           </p>
         </div>
         <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100`} id='visibleBig'>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
         {/* first outdoorImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={outdoor1}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Silk Tent(Red)</h2>
-              <h3 className='line-through text-sm'>Ksh. 8,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Silk Tent(Red)</h2>
+              <h3 className='line-through'>Ksh. 8,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 6,500</h3>
@@ -935,10 +935,10 @@ export default function Home() {
           {/* second outdoor Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={outdoor2}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Tent K2V</h2>
-              <h3 className='line-through text-sm'>Ksh. 16,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Tent K2V</h2>
+              <h3 className='line-through'>Ksh. 16,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 14,000</h3>
@@ -947,14 +947,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
           {/* third outdoorImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={outdoor4}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Silk Tent(Blue)</h2>
-              <h3 className='line-through text-sm'>Ksh.8,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Silk Tent(Blue)</h2>
+              <h3 className='line-through'>Ksh.8,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 6,500</h3>
@@ -965,10 +965,10 @@ export default function Home() {
           {/* fourth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={outdoor5}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Table Shade</h2>
-              <h3 className='line-through text-sm'>Ksh. 6,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Table Shade</h2>
+              <h3 className='line-through'>Ksh. 6,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 5,500</h3>
@@ -977,14 +977,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid3'>
+        <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid3'>
         {/* fifth outdoor Img */}
         <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={outdoor3}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Stand TentC02</h2>
-              <h3 className='line-through text-sm'>Ksh. 16,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Stand TentC02</h2>
+              <h3 className='line-through'>Ksh. 16,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 14,000</h3>
@@ -995,10 +995,10 @@ export default function Home() {
         {/* fifth outdoor Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={outdoor3}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Stand TentC02</h2>
-              <h3 className='line-through text-sm'>Ksh. 16,000</h3>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
+              <div className='text-xs md:text-sm'>
+              <h2 className='font-semibold'>Stand TentC02</h2>
+              <h3 className='line-through'>Ksh. 16,000</h3>
               </div>
               <div>
               <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 14,000</h3>
@@ -1084,8 +1084,8 @@ export default function Home() {
         <section id='contact'>
           <div className='w-11/12 mx-auto block md:flex gap-6 pt-10 pb-5'>
           <div className='flex-1'>
-            <h2 className='text-xl'>Do You have any question or would like to know more about us?</h2>
-            <h3 className='text-lg text-center pb-4'>We'd love to hear from you!</h3>
+            <h2 className='text-lg md:text-xl'>Do You have any question or would like to know more about us?</h2>
+            <h3 className='text-sm md:text-lg text-center pb-4'>We'd love to hear from you!</h3>
             <img src={contactUsImg} className='h-80 w-full mx-auto'/>
           </div>
           <div className='flex-1'>
