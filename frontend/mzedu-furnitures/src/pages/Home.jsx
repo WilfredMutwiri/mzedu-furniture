@@ -233,13 +233,13 @@ export default function Home() {
           <div className='block md:flex gap-10'>
             <div className='flex gap-10' id='block1'>
             <div className=' bg-gray-200 hover:bg-teal-900 hover:text-white cursor-pointer'>
-              <a href='#'>
+              <a href='#bedRoom'>
               <img className='w-40 md:w-44' src={bedsAd}/>
               <h2 className='font-semibold text-lg text-center p-1'>Beds</h2>
               </a>
             </div>
             <div className=' bg-gray-200 hover:bg-teal-900 hover:text-white cursor-pointer'>
-              <a href='#'>
+              <a href='#livingRoom'>
               <img className='w-40 md:w-44' src={sofasAd}/>
               <h2 className='font-semibold text-lg text-center p-1'>Sofas</h2>
               </a>
@@ -247,15 +247,15 @@ export default function Home() {
             </div>
             <div className='flex gap-10 mt-6 md:mt-0' id='block2'>
             <div className=' bg-gray-200 hover:bg-teal-900 hover:text-white cursor-pointer'>
-              <a href='#'>
+              <a href='#diningRoom'>
               <img className='w-40 md:w-44' src={diningAd}/>
               <h2 className='font-semibold text-lg text-center p-1'>Dining</h2>
               </a>
             </div>
             <div className=' bg-gray-200 hover:bg-teal-900 hover:text-white cursor-pointer'>
-              <a href='#'>
-              <img className='w-40 md:w-44' src={officeAd}/>
-              <h2 className='font-semibold text-lg text-center p-1'>Office</h2>
+              <a href='#outDoor'>
+              <img className='w-40 md:w-44' src={outdoor2}/>
+              <h2 className='font-semibold text-lg text-center p-1'>Shades</h2>
               </a>
             </div>
             </div>
@@ -290,10 +290,10 @@ export default function Home() {
         </Carousel>
             </div>
             <div className='text-white bg-teal-900 p-6 w-11/12 m-auto Wmb-5 md:mt-5 mb-10'>
-              <p className='text-center leading-relaxed font-semibold text-lg'>
+              <p className='text-center leading-relaxed font-semibold text-normal md:text-lg'>
                 SAVE UP TO 25% OFF SOFAS!
               </p>
-              <h2 className='text-center'>
+              <h2 className='text-center text-xs md:text-sm'>
               *Terms & Condtitons Apply. Save on almost everything with exclusive prices and offers
               </h2>
             </div>
@@ -315,7 +315,7 @@ export default function Home() {
       </section>
       <hr className='w-11/12 m-auto'/>
       {/* Featured Products */}
-      <section>
+      <section id='featured'>
         <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Featured Products</h2>
         <Link to="/featuredProducts">
@@ -326,60 +326,90 @@ export default function Home() {
           {/* first features products div */}
           <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
           {/* Grid 1 */}
-          <div className='grid grid-cols-2 gap-4 mb-2'>
-          <div className='' id='decor'>
-            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured1}/>
-            <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Gamming Chair</h2>
-            <h3 className=' text-red-500'>Ksh 10,500</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+          <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={featured1}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Gamming Chair</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 10,500</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
-          <div className='' id='decor'>
-          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured2}/>
-          <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Outdoor Shade</h2>
-            <h3 className=' text-red-500'>Ksh 12,500</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
-            </div>
-          </div>
-          </div>
-          {/* grid 2 */}
-          <div className='grid grid-cols-2 gap-4 mb-2'>
-          <div id='decor'>
-          <img className='w-40 md:w-52 h-[155px] object-cover' src={featured3}/>
-          <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Rounded Table</h2>
-            <h3 className=' text-red-500'>Ksh 8,900</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={featured2}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Outdoor Shade</h2>
+              <h3 className='line-through text-sm'>Ksh. 12,500</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
 
-          <div id='decor'>
-          <img className='w-40 md:w-52 h-[155px] object-cover' src={featured4}/>
-          <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Flower Holder</h2>
-            <h3 className=' text-red-500'>Ksh 6,300</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+          </div>
+          {/* grid 2 */}
+          <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={featured3}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Rounded Table (set)</h2>
+              <h3 className='line-through text-sm'>Ksh. 8,900</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={featured4}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Flower Holder (set)</h2>
+              <h3 className='line-through text-sm'>Ksh. 6,300</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
           </div>
           {/* grid 3 */}
-          <div className='grid grid-cols-2 gap-4 mb-2'>
-          <div id='decor'>
-          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured5}/>
-          <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Flower Grid</h2>
-            <h3 className=' text-red-500'>Ksh 8,300</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+          <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0'>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={featured5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Flower Grid (Love)</h2>
+              <h3 className='line-through text-sm'>Ksh. 8,300</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
-          <div className='' id='decor'>
-            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured6}/>
-            <div className='p-2 flex flex-col gap-2 bg-gray-200'>
-            <h2 className=''>Office Desk</h2>
-            <h3 className=' text-red-500'>Ksh 14,500</h3>
-            <Button className='w-full' gradientDuoTone="pinkToOrange" outline>Buy Now</Button>
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={featured6}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Office Desk M2R</h2>
+              <h3 className='line-through text-sm'>Ksh. 14,500</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 15,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
             </div>
           </div>
           </div>
@@ -387,15 +417,15 @@ export default function Home() {
         <Link to="/featuredProducts"> 
         <Button className='w-40 mx-auto md:hidden' gradientDuoTone="pinkToOrange">Browse More <span><FaArrowRight className='ml-2 text-xl'/></span></Button>
         </Link>
-        <hr className='block md:hidden'/>
+        <hr className='block md:hidden w-11/12 mx-auto '/>
         </div>
       </section>
       <section>
       <div className=' text-white bg-red-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
-              <p className='text-center leading-relaxed font-semibold text-lg'>
+              <p className='text-center leading-relaxed font-semibold text-normal md:text-lg'>
                 WE OFFER FREE DELIVERY FOR ABOVE 100,000!
               </p>
-              <h2 className='text-center'>
+              <h2 className='text-center text-xs md:text-sm'>
               *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
               </h2>
             </div>
@@ -508,17 +538,17 @@ export default function Home() {
         <Button className='mt-6 mb-2 w-40 mx-auto md:hidden' gradientDuoTone="pinkToOrange">Browse More <span><FaArrowRight className='ml-2 text-xl'/></span></Button>
         </Link>
       </section>
-      <hr/>
+      <hr className='w-11/12 mx-auto '/>
       <div className=' text-white bg-cyan-700 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
-              <p className='text-center leading-relaxed font-semibold text-lg'>
+              <p className='text-center leading-relaxed font-semibold text-sm md:text-lg'>
                 WE OFFER FREE DELIVERY FOR PURCHASES AROUND DIANI-UKUNDA
               </p>
-              <h2 className='text-center'>
+              <h2 className='text-center text-xs md:text-sm'>
               *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
               </h2>
             </div>
       {/* Living room section */}
-      <section>
+      <section id='livingRoom'>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Living Room Elegance</h2>
         <Link to="/newArrivals">
@@ -530,8 +560,9 @@ export default function Home() {
           Step into Living Room Elegance, where comfort meets style in every corner. Discover timeless pieces that transform your space into a sanctuary of sophistication. Elevate your home with designs crafted to inspire and impress.
           </p>
         </div>
-        <div className={`w-11/12 m-auto pt-5 pb-5 flex gap-6 transition-opacity duration-100`} id='visibleBig'>
-        {/* first livingRoomImg */}
+        <div className={"w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100"} id='visibleBig'>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
+          {/* first livingRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom1}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
@@ -550,7 +581,7 @@ export default function Home() {
             <img className='w-52 h-[200px] object-fill' src={livingRoom2}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
-              <h2 className='text-sm font-semibold'>3-set Sofas</h2>
+              <h2 className='text-sm font-semibold'>3-Sofas</h2>
               <h3 className='line-through text-sm'>Ksh. 22,000</h3>
               </div>
               <div>
@@ -559,6 +590,8 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
           {/* thid livingRoom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={livingRoom3}/>
@@ -587,7 +620,23 @@ export default function Home() {
               </div>
             </div>
           </div>
-{/* fifth livingRoom Img*/}
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid3'>
+          {/* fifth livingRoom Img*/}
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Africana Sofas</h2>
+              <h3 className='line-through text-sm'>Ksh. 25,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 20,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* fifth livingRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
@@ -602,23 +651,27 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <hr/>
+        </div>
+        <Link to="/featuredProducts"> 
+        <Button className='w-40 mx-auto md:hidden' gradientDuoTone="pinkToOrange">Browse More <span><FaArrowRight className='ml-2 text-xl'/></span></Button>
+        </Link>
+        <hr className='mt-3 md:mt-0 w-11/12 mx-auto'/>
       <div className=' text-white bg-red-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
       <BiSolidPurchaseTagAlt className='text-xl md:text-3xl'/>
-              <p className='text-center leading-relaxed font-semibold text-lg'>
+              <p className='text-center leading-relaxed font-semibold text-sm md:text-lg'>
                 WHAT ARE YOU WAITING FOR? MAKE YOUR ORDER TODAY!
               </p>
-              <h2 className='text-center'>
+              <h2 className='text-center text-xs md:text-sm'>
               *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
               </h2>
             </div>
       </section>
       {/* dining room section */}
-      <section>
+      <section id='diningRoom'>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Dining Elegance</h2>
         <Link to="/newArrivals">
-        <Label className='right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
+        <Label className=' right-12 absolute my-auto flex gap-1 text-cyan-700 hover:text-red-600 cursor-pointer'>View all <span><FaArrowRight className='text-sm md:text-lg mt-1 md:mt-0'/></span></Label>
         </Link>
         </div>
         <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
@@ -626,9 +679,10 @@ export default function Home() {
           Step into Dining Elegance, where every meal becomes an occasion. Discover timeless pieces that blend style and comfort, creating the perfect ambiance for unforgettable gatherings.
           </p>
         </div>
-        <div className={`w-11/12 m-auto pt-5 pb-5 flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
         {/* first diningRoomImg */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+        <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={dining1}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -655,12 +709,14 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
           {/* thid diningRoom Img */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={dining3}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
-              <h2 className='text-sm font-semibold'>Coffee pub Orange</h2>
+              <h2 className='text-sm font-semibold'>Coffee pub</h2>
               <h3 className='line-through text-sm'>Ksh. 20,000</h3>
               </div>
               <div>
@@ -674,7 +730,7 @@ export default function Home() {
             <img className='w-52 h-[200px] object-fill' src={dining4}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
-              <h2 className='text-sm font-semibold'>Blue Africana Set</h2>
+              <h2 className='text-sm font-semibold'>Blue Africana</h2>
               <h3 className='line-through text-sm'>Ksh.27,000</h3>
               </div>
               <div>
@@ -683,12 +739,28 @@ export default function Home() {
               </div>
             </div>
           </div>
-{/* fifth diningRoom Img*/}
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid3'>
+          {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
-              <h2 className='text-sm font-semibold'>Coffe Pub Gray</h2>
+              <h2 className='text-sm font-semibold'>Coffe Pub</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 18,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* fifth diningRoom Img*/}
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Coffe Pub</h2>
               <h3 className='line-through text-sm'>Ksh. 20,000</h3>
               </div>
               <div>
@@ -698,17 +770,22 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </div>
+        <Link to="/featuredProducts"> 
+        <Button className='w-40 mx-auto md:hidden' gradientDuoTone="pinkToOrange">Browse More <span><FaArrowRight className='ml-2 text-xl'/></span></Button>
+        </Link>
+        <hr className='mt-3 md:mt-0 w-11/12 mx-auto'/>
       </section>
       <div className=' text-white bg-cyan-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
-              <p className='text-center leading-relaxed font-semibold text-lg'>
+              <p className='text-center leading-relaxed font-semibold text-normal md:text-lg'>
                 WE OFFER FREE DELIVERY FOR ABOVE 100,000!
               </p>
-              <h2 className='text-center'>
+              <h2 className='text-center text-xs md:text-sm'>
               *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
               </h2>
             </div>
             {/* bedroom section */}
-            <section>
+            <section id='bedRoom'>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Serenity Haven</h2>
         <Link to="/newArrivals">
@@ -720,7 +797,8 @@ export default function Home() {
           Welcome to Serenity Haven, where every detail is designed for restful nights and peaceful mornings. Discover bedroom furniture that transforms your space into a sanctuary of comfort and style.
           </p>
         </div>
-        <div className={`w-11/12 m-auto pt-5 pb-5 flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100`} id='visibleBig'>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
         {/* first bedRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={bed1}/>
@@ -749,6 +827,8 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
           {/* thid bedRoom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={bed3}/>
@@ -763,8 +843,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* fourth bedRoomImg */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            {/* fourth bedRoomImg */}
+            <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={bed4}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
@@ -777,12 +857,28 @@ export default function Home() {
               </div>
             </div>
           </div>
-{/* fifth diningRoom Img*/}
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid3'>
+          {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
-              <h2 className='text-sm font-semibold'>King X0D Large</h2>
+              <h2 className='text-sm font-semibold'>King Large</h2>
+              <h3 className='line-through text-sm'>Ksh. 20,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 17,500</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          {/* fifth diningRoom Img*/}
+<div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>King Large</h2>
               <h3 className='line-through text-sm'>Ksh. 20,000</h3>
               </div>
               <div>
@@ -792,17 +888,23 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </div>
+        <Link to="/featuredProducts"> 
+        <Button className='w-40 mx-auto md:hidden' gradientDuoTone="pinkToOrange">Browse More <span><FaArrowRight className='ml-2 text-xl'/></span></Button>
+        </Link>
+        <hr className='mt-3 md:mt-0 w-11/12 mx-auto'/>
       </section>
       <div className=' text-white bg-green-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
       <BiShoppingBag className='text-xl md:text-3xl'/>
-              <p className='text-center leading-relaxed font-semibold text-lg'>
+              <p className='text-center leading-relaxed font-semibold text-sm md:text-lg'>
                 WE HAVE ALL YOU NEED...LOOK NO FURTHER, SHOP WITH US TODAY!
               </p>
-              <h2 className='text-center'>
+              <h2 className='text-center text-xs md:text-sm'>
               *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
               </h2>
             </div>
-            <section>
+{/* outdoor section */}
+    <section id='outDoor'>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Breezescape</h2>
         <Link to="/newArrivals">
@@ -814,7 +916,8 @@ export default function Home() {
           Transform your outdoor space into a serene retreat with our Breezescape collection. Discover elegantly crafted furniture designed to bring comfort and style to your open-air oasis.
           </p>
         </div>
-        <div className={`w-11/12 m-auto pt-5 pb-5 flex gap-6 transition-opacity duration-100`} id='visibleBig'>
+        <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100`} id='visibleBig'>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid1'>
         {/* first outdoorImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={outdoor1}/>
@@ -834,7 +937,7 @@ export default function Home() {
             <img className='w-52 h-[200px] object-fill' src={outdoor2}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div>
-              <h2 className='text-sm font-semibold'>Stand Tent K2V</h2>
+              <h2 className='text-sm font-semibold'>Tent K2V</h2>
               <h3 className='line-through text-sm'>Ksh. 16,000</h3>
               </div>
               <div>
@@ -843,21 +946,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* thid outdoor Img */}
-          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={outdoor3}/>
-            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
-              <div>
-              <h2 className='text-sm font-semibold'>Stand Tent C02</h2>
-              <h3 className='line-through text-sm'>Ksh. 16,000</h3>
-              </div>
-              <div>
-              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 14,000</h3>
-              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
-              </div>
-            </div>
-          </div>
-          {/* fourth outdoorImg */}
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid2'>
+          {/* third outdoorImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill' src={outdoor4}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
@@ -871,7 +962,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-{/* fifth diningRoom Img*/}
+          {/* fourth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
             <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={outdoor5}/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
@@ -886,6 +977,41 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid3'>
+        {/* fifth outdoor Img */}
+        <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={outdoor3}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Stand TentC02</h2>
+              <h3 className='line-through text-sm'>Ksh. 16,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 14,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+        {/* fifth outdoor Img */}
+          <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
+            <img className='w-52 h-[200px] object-fill' src={outdoor3}/>
+            <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
+              <div>
+              <h2 className='text-sm font-semibold'>Stand TentC02</h2>
+              <h3 className='line-through text-sm'>Ksh. 16,000</h3>
+              </div>
+              <div>
+              <h3 className=' text-red-500 text-sm font-semibold'>Ksh. 14,000</h3>
+              <FaCartArrowDown className='text-xl text-orange-600 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <Link to="/featuredProducts"> 
+        <Button className='w-40 mx-auto md:hidden' gradientDuoTone="pinkToOrange">Browse More <span><FaArrowRight className='ml-2 text-xl'/></span></Button>
+        </Link>
+        <hr className='mt-3 md:mt-0 w-11/12 mx-auto'/>
       </section>
       {/* testimonies section */}
       <hr className='w-11/12 m-auto' />
@@ -955,7 +1081,7 @@ export default function Home() {
         </div>
         </section>
         {/* contact us section */}
-        <section>
+        <section id='contact'>
           <div className='w-11/12 mx-auto block md:flex gap-6 pt-10 pb-5'>
           <div className='flex-1'>
             <h2 className='text-xl'>Do You have any question or would like to know more about us?</h2>

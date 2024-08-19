@@ -64,11 +64,11 @@ export default function NavBar() {
       </Navbar.Link>
       <Navbar.Link href="/featuredProducts">FEATURED</Navbar.Link>
       <Navbar.Link href="/newArrivals">NEW ARRIVALS</Navbar.Link>
-      <Navbar.Link href="#">LIVING ROOM</Navbar.Link>
-      <Navbar.Link href="#">DINING</Navbar.Link>
-      <Navbar.Link href="#">BEDROOM</Navbar.Link>
-      <Navbar.Link href="#">OUTDOOR</Navbar.Link>
-      <Navbar.Link href="#">CONTACT</Navbar.Link>
+      <Navbar.Link href="#livingRoom">LIVING ROOM</Navbar.Link>
+      <Navbar.Link href="#diningRoom">DINING</Navbar.Link>
+      <Navbar.Link href="#bedRoom">BEDROOM</Navbar.Link>
+      <Navbar.Link href="#outDoor">OUTDOOR</Navbar.Link>
+      <Navbar.Link href="#contact">CONTACT</Navbar.Link>
     </Navbar.Collapse>
   </Navbar>
   <div className='bg-gray-800 p-2 text-white flex justify-center'>
