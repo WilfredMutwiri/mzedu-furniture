@@ -1,47 +1,39 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import {Label, Textarea, TextInput } from "flowbite-react";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Carousel } from 'react-responsive-carousel';
 import { BsStars } from "react-icons/bs";
 import { BiShoppingBag, BiSolidPurchaseTagAlt } from "react-icons/bi";
+// banners
+import banner1 from '../images/banner1.webp'
+import banner2 from '../images/banner2.webp'
+import banner3 from '../images/banner3.webp'
+// popular section
+import dinningTable1 from '../images/dinningTable1.webp'
+import popular1 from '../images/popular1.webp'
+import popular2 from '../images/popular2.webp'
+import popular3 from '../images/officeAd.webp'
 
-import banner2 from '../images/banner2.jpg'
-import banner1 from '../images/banner1.jpg'
-import banner3 from '../images/banner3.jpg'
-import banner4 from '../images/banner4.jpg'
-import banner5 from '../images/banner5.jpg'
-
-import dinningTable1 from '../images/dinningTable1.jpeg'
-import popular1 from '../images/popular1.jpeg'
-import popular2 from '../images/popular2.jpeg'
-import popular3 from '../images/officeDesk1.jpeg'
-
-import dinningTable2 from '../images/dinningTable2.jpeg'
-import bedsAd from '../images/bedsAds.png'
-import diningAd from '../images/diningAd.jpg'
-import officeAd from '../images/officeAd.png'
-import sofasAd from '../images/sofasAd.png'
-import Decor1 from '../images/luxurydecor.png'
-import Decor2 from '../images/decor2.png'
+import dinningTable2 from '../images/dinningTable2.webp'
+import bedsAd from '../images/bedsAds.webp'
+import diningAd from '../images/diningAd.webp'
+import sofasAd from '../images/sofasAd.webp'
+import Decor1 from '../images/luxurydecor.webp'
+import Decor2 from '../images/decor2.webp'
 // featured funiture
-import featured1 from '../images/featured1.jpeg'
-import featured2 from '../images/featured2.jpeg'
-import featured3 from '../images/featured3.jpeg'
-import featured4 from '../images/featured4.jpeg'
-import featured5 from '../images/featured5.jpeg'
+import featured1 from '../images/featured1.webp'
+import featured2 from '../images/featured2.webp'
+import featured3 from '../images/featured3.webp'
+import featured4 from '../images/featured4.webp'
+import featured5 from '../images/featured5.webp'
 import featured6 from '../images/featured6.webp'
-import featured7 from '../images/featured7.webp'
-import featured8 from '../images/featured8.webp'
-import featured9 from '../images/featured9.webp'
-import featured10 from '../images/featured10.webp'
-
 // arrivals
-import Arrival1 from '../images/Arrival1.jpeg'
-import Arrival2 from '../images/Arrival2.jpeg'
-import Arrival3 from '../images/Arrival3.jpeg'
-import Arrival4 from '../images/Arrival4.jpeg'
-import Arrival5 from '../images/Arrival5.jpeg'
+import Arrival1 from '../images/Arrival1.webp'
+import Arrival2 from '../images/Arrival2.webp'
+import Arrival3 from '../images/Arrival3.webp'
+import Arrival4 from '../images/Arrival4.webp'
+import Arrival5 from '../images/Arrival5.webp'
 // living room
 import livingRoom1 from '../images/living Room/living room 1.webp'
 import livingRoom2 from '../images/living Room/living room 2.webp'
@@ -67,73 +59,17 @@ import outdoor3 from '../images/outdoor/outdoor3.webp'
 import outdoor4 from '../images/outdoor/outdoor4.webp'
 import outdoor5 from '../images/outdoor/outdoor5.webp'
 // testimoners
-import testimoner from '../images/testimoner.jpeg'
-import testimoner2 from '../images/testimoner2.jpg'
-import testimoner3 from '../images/testimoner3.jfif'
-import { useState,useEffect } from 'react'
+import testimoner from '../images/testimoner.webp'
+import testimoner2 from '../images/testimoner2.webp'
+import testimoner3 from '../images/testimoner3.webp'
 import { Button,Rating } from 'flowbite-react'
 import { Link } from 'react-router-dom';
 import contactUsImg from '../images/contactUs.svg'
+
 export default function Home() {
-  const images=[banner1,banner2,banner3,banner4,banner5];
-  const [currentImage,setCurrentImage]=useState(0)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage === images.length - 1 ? 0 : prevImage + 1));
-        // return () => clearInterval(interval);
-    }, 3000);
-  }, [images.length],
-  )
-  const dealimages=[popular1,popular2,popular3,dinningTable1,dinningTable2];
 
-  const [currentdealImage,setCurrentdealImage]=useState(0);
-  const [currentImageName,setImageName]=useState(0);
-  const [decorImage,setDecorImage]=useState(0)
-  const [imagePrice,setImagePrice]=useState(0);
-
-// features products
-  const featuredImages=[featured1,featured2,featured3,featured4,featured5,featured6,featured7,featured8,featured10,featured9]
-  const imageName=["Outdoor Tent","Complete Dinning Table","Living Room Table"]
-  const featuredImagesNames=["Gamming Chair","Outdoor Shade","Rounded Table","Flower Holder","Flower Grid","Office Mahogany Desk","Glassdoor Office Desk","Office Chair","Dining set","Gaming chair Armless"]
-  const featuredImagesPrice=['10,500','12,500','8,900','6,300','8300',"14500","20,500","9,900","26,300","8,300"]
-  const imagePrices=['20,000','16,000','28,500']
-  const decorImages=[Decor1,Decor2]
-
-// deals section
-  const changedealImage=(direction)=>{
-    setCurrentdealImage((prevDealImage)=>{
-      if(direction==="prev"){
-        return prevDealImage===0?dealimages.length-1:prevDealImage-1;
-      }else{
-        return prevDealImage===dealimages.length-1?0:prevDealImage+1;
-      }
-    });
-    setImageName((prevImageName)=>{
-      if(direction==="prev"){
-        return prevImageName===0?imageName.length-1:prevImageName-1;
-      }else{
-        return prevImageName===imageName.length-1?0:prevImageName+1
-      }
-    })
-    setImagePrice((prevImagePrice)=>{
-      if(direction==="prev"){
-        return prevImagePrice===0?imagePrices.length-1:prevImagePrice-1;
-      }else{
-        return prevImagePrice===imagePrices.length-1?0:prevImagePrice+1
-      }
-    })
-    }
-// decoration advert section
-    const changedecorImage=(direction)=>{
-      setDecorImage((prevDecorImage)=>{
-        if(direction==="prev"){
-          return prevDecorImage===0?decorImages.length-1:prevDecorImage-1;
-        }else{
-          return prevDecorImage===decorImages.length-1?0:prevDecorImage+1;
-        }
-      })
-      }
-      const homeBannerImages=[banner1,banner2,banner3]
+const dealimages=[popular1,popular2,popular3,dinningTable1,dinningTable2];
+const homeBannerImages=[banner1,banner2,banner3]
 
   return (
     <div >

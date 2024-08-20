@@ -12,18 +12,19 @@ import featuredBunner2 from '../images/featuredBunner2.png'
 import featuredBunner3 from '../images/featuredBunner3.png'
 import featuredBunner4 from '../images/featuredBunner4.png'
 // featured furniture
-import featured1 from '../images/featured1.jpeg';
-import featured2 from '../images/featured2.jpeg';
-import featured3 from '../images/featured3.jpeg';
-import featured4 from '../images/featured4.jpeg';
-import featured5 from '../images/featured5.jpeg';
+import featured1 from '../images/featured1.webp';
+import featured2 from '../images/featured2.webp';
+import featured3 from '../images/featured3.webp';
+import featured4 from '../images/featured4.webp';
+import featured5 from '../images/featured5.webp';
 import featured6 from '../images/featured6.webp';
 import featured7 from '../images/featured7.webp';
 import featured8 from '../images/featured8.webp';
 import featured9 from '../images/featured9.webp';
 import featured10 from '../images/featured10.webp';
-import featured11 from '../images/Arrival3.jpeg';
-import featured12 from '../images/Arrival4.jpeg'
+
+import featured11 from '../images/Arrival3.webp';
+import featured12 from '../images/Arrival4.webp'
 import { Alert, Button } from 'flowbite-react';
 import { FaFire} from 'react-icons/fa6';
 
