@@ -3,14 +3,14 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // banner
-import banner1 from '../images/Black Yellow Bold Bag Fashion Sale Banner (1).png';
-import banner2 from '../images/Black Yellow Bold Bag Fashion Sale Banner (2).png';
-import banner3 from '../images/newArrivalsbanner3.png'
-import banner4 from '../images/newArrivalsbanner4.png'
-import freeDeliveryImg from '../images/freeDelivery.png'
-import featuredBunner2 from '../images/featuredBunner2.png'
-import featuredBunner3 from '../images/featuredBunner3.png'
-import featuredBunner4 from '../images/featuredBunner4.png'
+import banner1 from '../images/Black Yellow Bold Bag Fashion Sale Banner (1).webp';
+import banner2 from '../images/Black Yellow Bold Bag Fashion Sale Banner (2).webp';
+import banner3 from '../images/newArrivalsbanner3.webp'
+import banner4 from '../images/newArrivalsbanner4.webp'
+import freeDeliveryImg from '../images/freeDelivery.webp'
+import featuredBunner2 from '../images/featuredBunner2.webp'
+import featuredBunner3 from '../images/featuredBunner3.webp'
+import featuredBunner4 from '../images/featuredBunner4.webp'
 // featured furniture
 import featured1 from '../images/featured1.webp';
 import featured2 from '../images/featured2.webp';
