@@ -25,13 +25,14 @@ import featured10 from '../images/featured10.webp';
 
 import featured11 from '../images/Arrival3.webp';
 import featured12 from '../images/Arrival4.webp'
-import { Alert, Button } from 'flowbite-react';
+import {Button } from 'flowbite-react';
 import { FaFire} from 'react-icons/fa6';
 
 export default function FeaturedProducts() {
   return (
     <div className="">
-      {/* carousel div */}
+      <header>
+              {/* carousel div */}
       <div>
       <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
         <div>
@@ -51,7 +52,8 @@ export default function FeaturedProducts() {
         </div>
       </Carousel>
       </div>
-      <section>
+      </header>
+      <main>
         {/* new arrivals products section */}
         <div className='w-11/12 mx-auto'>
           <h2 className='font-semibold text-2xl p-4 flex gap-1'><FaFire className='text-red-600 text-2xl'/>Featured Products</h2>
@@ -62,7 +64,7 @@ export default function FeaturedProducts() {
           {/* Grid 1 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
           <div className=''>
-            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured1}/>
+            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured1} alt='featured furniture'/>
             <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Gamming Chair</h2>
             <h3 className=' text-red-500'>Ksh 10,500</h3>
@@ -70,7 +72,7 @@ export default function FeaturedProducts() {
             </div>
           </div>
           <div className=''>
-          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured2}/>
+          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured2} alt='featured furniture'/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Outdoor Shade</h2>
             <h3 className=' text-red-500'>Ksh 12,500</h3>
@@ -81,7 +83,7 @@ export default function FeaturedProducts() {
           {/* grid 2 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
           <div>
-          <img className='w-40 md:w-52 h-[155px] object-cover' src={featured3}/>
+          <img className='w-40 md:w-52 h-[155px] object-cover' src={featured3} alt='featured furniture'/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Rounded Table</h2>
             <h3 className=' text-red-500'>Ksh 8,900</h3>
@@ -90,7 +92,7 @@ export default function FeaturedProducts() {
           </div>
 
           <div>
-          <img className='w-40 md:w-52 h-[155px] object-cover' src={featured4}/>
+          <img className='w-40 md:w-52 h-[155px] object-cover' src={featured4} alt='featured furniture'/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Flower Holder</h2>
             <h3 className=' text-red-500'>Ksh 6,300</h3>
@@ -101,7 +103,7 @@ export default function FeaturedProducts() {
           {/* grid 3 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
           <div>
-          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured5}/>
+          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured5} alt='featured furniture'/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Flower Grid</h2>
             <h3 className=' text-red-500'>Ksh 8,300</h3>
@@ -109,7 +111,7 @@ export default function FeaturedProducts() {
             </div>
           </div>
           <div className=''>
-            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured6}/>
+            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured6} alt='featured furniture'/>
             <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Office Desk</h2>
             <h3 className=' text-red-500'>Ksh 14,500</h3>
@@ -119,9 +121,8 @@ export default function FeaturedProducts() {
           </div>
         </div>
           </div>
-
           {/* free delivery banner */}
-          <div className='w-full h-auto'>
+          <div className='w-[100%] h-auto'>
       <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
         <div>
           <img className='w-full h-[80%]' src={freeDeliveryImg} alt="Banner 1"/>
@@ -141,12 +142,13 @@ export default function FeaturedProducts() {
       </Carousel>
       </div>
         </div>
+        <section>
         {/* second div */}
           <div className={`w-11/12 m-auto pt-10 pb-5 grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
           {/* Grid 1 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
           <div className=''>
-            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured7}/>
+            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured7} alt='featured furniture'/>
             <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Office Desk</h2>
             <h3 className=' text-red-500'>Ksh 14,500</h3>
@@ -154,7 +156,7 @@ export default function FeaturedProducts() {
             </div>
           </div>
           <div className=''>
-          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured8}/>
+          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured8} alt='featured furniture'/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Office chair</h2>
             <h3 className=' text-red-500'>Ksh 9,500</h3>
@@ -165,7 +167,7 @@ export default function FeaturedProducts() {
           {/* grid 2 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
           <div>
-          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured9}/>
+          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured9} alt='featured furniture'/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Gamming Chair</h2>
             <h3 className=' text-red-500'>Ksh 7,500</h3>
@@ -174,7 +176,7 @@ export default function FeaturedProducts() {
           </div>
 
           <div>
-          <img className='w-40 md:w-52 h-[155px] object-cover' src={featured10}/>
+          <img className='w-40 md:w-52 h-[155px] object-cover' src={featured10} alt='featured furniture'/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Dining Set</h2>
             <h3 className=' text-red-500'>Ksh 16,300</h3>
@@ -185,7 +187,7 @@ export default function FeaturedProducts() {
           {/* grid 3 */}
           <div className='grid grid-cols-2 gap-4 mb-2'>
           <div>
-          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured11}/>
+          <img className='w-40 md:w-52 h-[155px] object-fill' src={featured11} alt='featured furniture'/>
           <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Wall clock</h2>
             <h3 className=' text-red-500'>Ksh 3,100</h3>
@@ -193,7 +195,7 @@ export default function FeaturedProducts() {
             </div>
           </div>
           <div className=''>
-            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured12}/>
+            <img className='w-40 md:w-52 h-[155px] object-fill' src={featured12} alt='featured furniture'/>
             <div className='p-2 flex flex-col gap-2 bg-gray-200'>
             <h2 className=''>Desk Deco</h2>
             <h3 className=' text-red-500'>Ksh 6,500</h3>
@@ -203,6 +205,7 @@ export default function FeaturedProducts() {
           </div>
         </div>
       </section>
+      </main>
     </div>
   );
 }

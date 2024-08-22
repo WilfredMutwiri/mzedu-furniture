@@ -73,13 +73,14 @@ const homeBannerImages=[banner1,banner2,banner3]
 
   return (
     <div >
+      <header>
       <div className='max-w-[1400px] h-[780px] w-full m-auto'>
         {/* home carousel */}
       <div>
       <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
         {
           homeBannerImages.map((image,index)=>(
-            <div key={index}>
+            <div key={index} className='max-w-[100%]'>
               <img className='w-full h-auto' src={image} alt={`Banner ${index+1}`}/>
             </div>
           ))
@@ -98,13 +99,16 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           </div>
           <h2 className='text-white z-50 relative text-center font-serif text-xl md:text-5xl pt-5'>Furniture <span className='text-orange-500'>&</span> Deco</h2>
-        <div className='hidden md:flex gap-5 justify-center mt-5 md:mt-10'>
+          <h3 className='text-sm md:text-lg pt-4'>Stylish & Affordable furniture</h3>
+        <div className='hidden md:flex gap-5 justify-center mt-4 md:mt-10'>
           <Button gradientDuoTone="pinkToOrange" className='text-xs'>Make an Order</Button>
           <Button gradientDuoTone="pinkToOrange">New Arrivals</Button>
         </div>
       </div>
       </div>
       </div>
+      </header>
+      <main>
       <section>
         {/* home banner */}
         <div className="w-10/12 mx-auto block md:grid grid-cols-3 -mt-[560px] md:-mt-56 z-50 relative mb-10">
@@ -112,7 +116,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             <h2 className="p-5 text-xl text-white font-semibold">DEALS OF THE DAY</h2>
             <hr />
             <p className="p-4 text-white leading-relaxed">
-              We offer valuable deals every day, our exclusive offers are available to all users,
+              We offer valuable furniture deals every day, our exclusive offers are available to all users,
               you can visit our store today to grab your offer or order online!
             </p>
           </div>
@@ -120,7 +124,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
         {
           dealimages.map((dealImage,index)=>(
-            <div key={index}>
+            <div key={index} className='max-w-[100%]'>
               <img className='w-full h-auto' src={dealImage} alt={`Banner ${index+1}`}/>
             </div>
           ))
@@ -137,7 +141,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             <h2 className="p-5 text-lg font-semibold">POPULAR PRODUCT</h2>
             <hr />
             <div className="flex gap-4 p-3">
-              <img className="w-20" src={popular1} alt="" />
+              <img className="w-20" src={popular1} alt="popular Image" />
               <div className="block">
               <h2 className="font-semibold">Packing Spur</h2>
               <span className="text-red-600">Ksh 12,000 <span className="line-through text-sm text-black">Ksh 16,000</span></span>
@@ -145,7 +149,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             </div>
             <hr />
             <div className="flex gap-4 p-3">
-              <img className="w-20" src={popular2} alt="" />
+              <img className="w-20" src={popular2} alt="popular furniture" />
               <div className="block">
               <h2 className="font-semibold">Flowers Holder</h2>
               <span className="text-red-600">Ksh 10,000 <span className="line-through text-sm text-black">Ksh 14,000</span></span>
@@ -153,7 +157,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             </div>
             <hr />
             <div className="flex gap-4 p-3">
-              <img className="w-20" src={popular3} alt="" />
+              <img className="w-20" src={popular3} alt="popular furniture" />
               <div className="block">
               <h2 className="font-semibold">Office desk</h2>
               <span className="text-red-600">Ksh 22,000 <span className="line-through text-sm text-black">Ksh 28,000</span></span>
@@ -170,13 +174,13 @@ const homeBannerImages=[banner1,banner2,banner3]
             <div className='flex gap-10' id='block1'>
             <div className=' bg-gray-200 hover:bg-teal-900 hover:text-white cursor-pointer'>
               <a href='#bedRoom'>
-              <img className='w-40 md:w-44' src={bedsAd}/>
+              <img className='w-40 md:w-44' src={bedsAd} alt='beds funiture ad'/>
               <h2 className='font-semibold text-lg text-center p-1'>Beds</h2>
               </a>
             </div>
             <div className=' bg-gray-200 hover:bg-teal-900 hover:text-white cursor-pointer'>
               <a href='#livingRoom'>
-              <img className='w-40 md:w-44' src={sofasAd}/>
+              <img className='w-40 md:w-44' src={sofasAd} alt='sofas furniture ad'/>
               <h2 className='font-semibold text-lg text-center p-1'>Sofas</h2>
               </a>
             </div>
@@ -184,13 +188,13 @@ const homeBannerImages=[banner1,banner2,banner3]
             <div className='flex gap-10 mt-6 md:mt-0' id='block2'>
             <div className=' bg-gray-200 hover:bg-teal-900 hover:text-white cursor-pointer'>
               <a href='#diningRoom'>
-              <img className='w-40 md:w-44' src={diningAd}/>
+              <img className='w-40 md:w-44' src={diningAd} alt='dinign furniture ad'/>
               <h2 className='font-semibold text-lg text-center p-1'>Dining</h2>
               </a>
             </div>
             <div className=' bg-gray-200 hover:bg-teal-900 hover:text-white cursor-pointer'>
               <a href='#outDoor'>
-              <img className='w-40 md:w-44' src={outdoor2}/>
+              <img className='w-40 md:w-44' src={outdoor2} alt='outdoor furniture'/>
               <h2 className='font-semibold text-lg text-center p-1'>Shades</h2>
               </a>
             </div>
@@ -199,18 +203,18 @@ const homeBannerImages=[banner1,banner2,banner3]
         </div>
         </div>
       </section>
-      {/* decore section */}
-      <section>
+            {/* decore section */}
+            <section>
         <div className='hidden md:block'>
         <div className='w-10/12 block md:flex m-auto pt-10 pb-10 gap-0 md:gap-14'>
           <a href='#'>
           <div className='' id='decor'>
-            <img src={Decor1}/>
+            <img src={Decor1} alt='decor slide image'/>
           </div>
           </a>
           <a href='#'>
           <div id='decor'>
-            <img src={Decor2}/>            
+            <img src={Decor2} alt='decor slide funiture'/>            
           </div>
           </a>
         </div>
@@ -218,10 +222,10 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className="w-10/12 mx-auto block md:hidden mb-4">
         <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
         <div id='decor'>
-                <img className='w-60 h-60 object-contain mx-auto' src={Decor1}/>
+                <img className='w-60 h-60 object-contain mx-auto' src={Decor1} alt='funiture Img'/>
                 </div>
                 <div id='decor'>
-                <img className='w-60 h-60 object-contain mx-auto' src={Decor1}/>
+                <img className='w-60 h-60 object-contain mx-auto' src={Decor1} alt='furniture Img'/>
                 </div>
         </Carousel>
             </div>
@@ -264,7 +268,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           {/* Grid 1 */}
           <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={featured1}/>
+            <img className='w-52 h-[200px] object-fill' src={featured1} alt='featured furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className=' font-semibold'>Gamming Chair</h2>
@@ -277,7 +281,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             </div>
           </div>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300  h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={featured2}/>
+            <img className='w-52 h-[200px] object-fill' src={featured2} alt='featured furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2 text-xs md:text-sm'>
               <div className='text-xs md:text-sm'>
               <h2 className=' font-semibold'>Outdoor Shade</h2>
@@ -294,7 +298,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           {/* grid 2 */}
           <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0'>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={featured3}/>
+            <img className='w-52 h-[200px] object-fill' src={featured3} alt='featured furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Rounded Table (set)</h2>
@@ -307,7 +311,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             </div>
           </div>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={featured4}/>
+            <img className='w-52 h-[200px] object-fill' src={featured4} alt='featured furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='text-sm font-semibold'>Flower Holder (set)</h2>
@@ -323,7 +327,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           {/* grid 3 */}
           <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0'>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={featured5}/>
+            <img className='w-52 h-[200px] object-fill' src={featured5} alt='featured furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Flower Grid (Love)</h2>
@@ -336,7 +340,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             </div>
           </div>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={featured6}/>
+            <img className='w-52 h-[200px] object-fill' src={featured6} alt='featured furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className=' font-semibold'>Office Desk M2R</h2>
@@ -366,8 +370,8 @@ const homeBannerImages=[banner1,banner2,banner3]
               </h2>
             </div>
       </section>
-      {/* New Arrivals Section */}
-      <section>
+            {/* New Arrivals Section */}
+            <section>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>New Arrivals</h2>
         <Link to="/newArrivals">
@@ -375,15 +379,15 @@ const homeBannerImages=[banner1,banner2,banner3]
         </Link>
         </div>
         <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
-          <p className='leading-relaxed'>
+          <h2 className='leading-relaxed'>
           Discover the elegance in every detail with our latest furniture arrivals, where timeless design meets modern comfort. Elevate your space with pieces that inspire and invite warmth into your home. Embrace the perfect blend of style and function, crafted to make every moment unforgettable.
-          </p>
+          </h2>
         </div>
         <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
             {/* first arrival */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={Arrival1}/>
+            <img className='w-52 h-[200px] object-fill' src={Arrival1} alt='new Arrival Furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Dining Set</h2>
@@ -397,7 +401,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
             {/* second arrival */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={Arrival2}/>
+            <img className='w-52 h-[200px] object-fill' src={Arrival2} alt='new Arrival Furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className=' font-semibold'>Table Set</h2>
@@ -413,7 +417,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         </div>
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
         <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={Arrival3}/>
+            <img className='w-52 h-[200px] object-fill' src={Arrival3} alt='new Arrival Furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className=' font-semibold'>Wall Clock</h2>
@@ -427,7 +431,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
             {/* fourth arrival */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={Arrival4}/>
+            <img className='w-52 h-[200px] object-fill' src={Arrival4} alt='new Arrival Furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Infinity Cup</h2>
@@ -443,7 +447,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-2' id='grid3'>
           {/* fifth arrival */}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={Arrival5}/>
+            <img className='w-52 h-[200px] object-fill' src={Arrival5} alt='new Arrival Furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className=' font-semibold'>Wall Deco</h2>
@@ -456,7 +460,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             </div>
           </div>
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={Arrival5}/>
+            <img className='w-52 h-[200px] object-fill' src={Arrival5} alt='new Arrival Furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>WALL DECO</h2>
@@ -474,6 +478,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <Button className='mt-6 mb-2 w-40 mx-auto md:hidden' gradientDuoTone="pinkToOrange">Browse More <span><FaArrowRight className='ml-2 text-xl'/></span></Button>
         </Link>
       </section>
+      <section>
       <hr className='w-11/12 mx-auto '/>
       <div className=' text-white bg-cyan-700 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
               <p className='text-center leading-relaxed font-semibold text-sm md:text-lg'>
@@ -492,15 +497,15 @@ const homeBannerImages=[banner1,banner2,banner3]
         </Link>
         </div>
         <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
-          <p className='leading-relaxed'>
-          Step into Living Room Elegance, where comfort meets style in every corner. Discover timeless pieces that transform your space into a sanctuary of sophistication. Elevate your home with designs crafted to inspire and impress.
-          </p>
+          <h2 className='leading-relaxed'>
+          Step into Living Room Elegance, where comfort meets style in every corner. Discover timeless furniture pieces that transform your space into a sanctuary of sophistication. Elevate your home with designs crafted to inspire and impress.
+          </h2>
         </div>
         <div className={"w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100"} id='visibleBig'>
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
           {/* first livingRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={livingRoom1}/>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom1} alt='livingroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>French Sofas</h2>
@@ -514,7 +519,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* second livingroom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={livingRoom2}/>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom2} alt='livingroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>3-Set Sofas</h2>
@@ -530,7 +535,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
           {/* thid livingRoom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={livingRoom3}/>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom3} alt='livingroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Reeds Table</h2>
@@ -544,7 +549,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* fourth livingRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={livingRoom4}/>
+            <img className='w-52 h-[200px] object-fill' src={livingRoom4} alt='livingroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Coffee Table</h2>
@@ -560,7 +565,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-6 md:mb-0' id='grid3'>
           {/* fifth livingRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5}/>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5} alt='livingroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Africana Sofas</h2>
@@ -574,7 +579,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* fifth livingRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5}/>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={livingRoom5} alt='livingroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Africana Sofas</h2>
@@ -602,6 +607,7 @@ const homeBannerImages=[banner1,banner2,banner3]
               </h2>
             </div>
       </section>
+      </section>
       {/* dining room section */}
       <section id='diningRoom'>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
@@ -611,15 +617,15 @@ const homeBannerImages=[banner1,banner2,banner3]
         </Link>
         </div>
         <div className='w-11/12 mx-auto p-3 text-sm md:text-lg mt-1'>
-          <p className='leading-relaxed'>
-          Step into Dining Elegance, where every meal becomes an occasion. Discover timeless pieces that blend style and comfort, creating the perfect ambiance for unforgettable gatherings.
-          </p>
+          <h2 className='leading-relaxed'>
+          Step into Dining Elegance, where every meal becomes an occasion. Discover timeless furniture pieces that blend style and comfort, creating the perfect ambiance for unforgettable gatherings.
+          </h2>
         </div>
         <div className={`w-11/12 m-auto pt-10 pb-5 fl grid grid-row-3 md:flex gap-3 md:gap-6 transition-opacity duration-100 `} id='visibleBig'>
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
         {/* first diningRoomImg */}
         <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={dining1}/>
+            <img className='w-52 h-[200px] object-fill' src={dining1} alt='dining room furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Africana Set</h2>
@@ -633,7 +639,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* second diningroom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={dining2}/>
+            <img className='w-52 h-[200px] object-fill' src={dining2} alt='dining room furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>French Set</h2>
@@ -649,7 +655,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
           {/* thid diningRoom Img */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={dining3}/>
+            <img className='w-52 h-[200px] object-fill' src={dining3} alt='dining room furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Coffee pub</h2>
@@ -663,7 +669,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* fourth diningRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={dining4}/>
+            <img className='w-52 h-[200px] object-fill' src={dining4} alt='dining room furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Blue Africana</h2>
@@ -679,7 +685,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid3'>
           {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5}/>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5} alt='dining room furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Coffe Pub</h2>
@@ -693,7 +699,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5}/>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={dining5} alt='dining room furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Coffe Pub</h2>
@@ -712,6 +718,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         </Link>
         <hr className='mt-3 md:mt-0 w-11/12 mx-auto'/>
       </section>
+      <section>
       <div className=' text-white bg-cyan-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
               <p className='text-center leading-relaxed font-semibold text-normal md:text-lg'>
                 WE OFFER FREE DELIVERY FOR ABOVE 100,000!
@@ -721,7 +728,8 @@ const homeBannerImages=[banner1,banner2,banner3]
               </h2>
             </div>
             {/* bedroom section */}
-            <section id='bedRoom'>
+      </section>
+      <section id='bedRoom'>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Serenity Haven</h2>
         <Link to="/newArrivals">
@@ -737,7 +745,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
         {/* first bedRoomImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={bed1}/>
+            <img className='w-52 h-[200px] object-fill' src={bed1} alt='bedroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Queen Medium</h2>
@@ -751,7 +759,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* second bedroom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={bed2}/>
+            <img className='w-52 h-[200px] object-fill' src={bed2} alt='bedroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Queen Large</h2>
@@ -767,7 +775,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
           {/* thid bedRoom Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={bed3}/>
+            <img className='w-52 h-[200px] object-fill' src={bed3} alt='bedroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>King Medium</h2>
@@ -781,7 +789,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
             {/* fourth bedRoomImg */}
             <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={bed4}/>
+            <img className='w-52 h-[200px] object-fill' src={bed4} alt='bedroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>King Large</h2>
@@ -797,7 +805,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid3'>
           {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5}/>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5} alt='bedroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>King Large</h2>
@@ -811,7 +819,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* fifth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5}/>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={bed5} alt='bedroom furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>King Large</h2>
@@ -830,6 +838,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         </Link>
         <hr className='mt-3 md:mt-0 w-11/12 mx-auto'/>
       </section>
+      <section>
       <div className=' text-white bg-green-600 p-6 w-11/12 m-auto mt-14 md:mt-5 mb-10'>
       <BiShoppingBag className='text-xl md:text-3xl'/>
               <p className='text-center leading-relaxed font-semibold text-sm md:text-lg'>
@@ -839,7 +848,8 @@ const homeBannerImages=[banner1,banner2,banner3]
               *Terms & Condtitons Apply. Save on your transport! Breath, we've got you covered!
               </h2>
             </div>
-{/* outdoor section */}
+      </section>
+      {/* outdoor section */}
     <section id='outDoor'>
       <div className={`mt-5 w-72 m-auto border-black border-t-2 md:border-t-4 border-b-2 md:border-b-4 `}>
         <h2 className='text-center font-dancing text-xl md:text-3xl p-2'>Breezescape</h2>
@@ -856,7 +866,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid1'>
         {/* first outdoorImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={outdoor1}/>
+            <img className='w-52 h-[200px] object-fill' src={outdoor1} alt='outdoor furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Silk Tent(Red)</h2>
@@ -870,7 +880,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* second outdoor Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={outdoor2}/>
+            <img className='w-52 h-[200px] object-fill' src={outdoor2} alt='outdoor furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Tent K2V</h2>
@@ -886,7 +896,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid2'>
           {/* third outdoorImg */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={outdoor4}/>
+            <img className='w-52 h-[200px] object-fill' src={outdoor4} alt='outdoor furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Silk Tent(Blue)</h2>
@@ -900,7 +910,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           {/* fourth diningRoom Img*/}
 <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={outdoor5}/>
+            <img className='w-52 h-[200px] object-fill hover:scale-110 duration-300' src={outdoor5} alt='outdoor furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Table Shade</h2>
@@ -916,7 +926,7 @@ const homeBannerImages=[banner1,banner2,banner3]
         <div className='grid grid-cols-2 gap-4 mb-10 md:mb-0' id='grid3'>
         {/* fifth outdoor Img */}
         <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={outdoor3}/>
+            <img className='w-52 h-[200px] object-fill' src={outdoor3} alt='outdoor furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Stand TentC02</h2>
@@ -930,7 +940,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
         {/* fifth outdoor Img */}
           <div className='shadow-md hover:shadow-sm relative shadow-gray-300 h-[265px]' id='decor'>
-            <img className='w-52 h-[200px] object-fill' src={outdoor3}/>
+            <img className='w-52 h-[200px] object-fill' src={outdoor3} alt='outdoor furniture'/>
             <div className='p-3 flex justify-between bg-gray-200 relative gap-0 md:gap-2'>
               <div className='text-xs md:text-sm'>
               <h2 className='font-semibold'>Stand TentC02</h2>
@@ -949,8 +959,8 @@ const homeBannerImages=[banner1,banner2,banner3]
         </Link>
         <hr className='mt-3 md:mt-0 w-11/12 mx-auto'/>
       </section>
-      {/* testimonies section */}
-      <hr className='w-11/12 m-auto' />
+            {/* testimonies section */}
+            <hr className='w-11/12 m-auto' />
       <section className='bg-gray-100'>
       <h2 className={`text-center font-dancing text-2xl md:text-3xl pt-6 md:pt-10 pb-6 md:pb-10`}>~What Our Customers Have To Say~</h2>
       <div className='w-11/12 mx-auto h-auto'>
@@ -971,7 +981,7 @@ const homeBannerImages=[banner1,banner2,banner3]
             <p>
             I rely on Mzedu furniture and Deco to bring my visions to life. Their collection allows
             me to create bespoke spaces that exude sophistication. Their dedication to
-            quality craftsmanship and timeless design is amazing.
+            quality craftsmanship and timeless design furniture is amazing.
             </p>
             <h2 className='font-semibold'>Wilfred Mutwiri/ <span className='font-normal pl-2 text-blue-600'>Facebook</span></h2>
           </div>
@@ -1016,8 +1026,8 @@ const homeBannerImages=[banner1,banner2,banner3]
         </Carousel>
         </div>
         </section>
-        {/* contact us section */}
-        <section id='contact'>
+                {/* contact us section */}
+                <section id='contact'>
           <div className='w-11/12 mx-auto block md:flex gap-6 pt-10 pb-5'>
           <div className='flex-1'>
             <h2 className='text-lg md:text-xl'>Do You have any question or would like to know more about us?</h2>
@@ -1068,6 +1078,7 @@ const homeBannerImages=[banner1,banner2,banner3]
           </div>
           </div>
         </section>
+      </main>
       </div>
   )
 }
