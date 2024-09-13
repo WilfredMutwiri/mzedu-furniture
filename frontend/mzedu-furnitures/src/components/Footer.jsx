@@ -47,7 +47,8 @@ export function FooterComp() {
             <Footer.Icon href="#" icon={BsWhatsapp} />
             <Footer.Icon href="#" icon={BsLinkedin} />
           </div>
-          <h2 className="text-sm mt-4 md:mt-0">Developed and maintained by Wilfred Mutwiri <a className="text-blue-600 hover:text-red-600" href="https://wilfredmutwiri.vercel.app/" target="_blank">View porfolio</a></h2>
+          <h2 className="text-sm mt-4 md:mt-0">Developed and maintained by Erick Othiambo</h2>
+          {/* <h2 className="text-sm mt-4 md:mt-0">Developed and maintained by Wilfred Mutwiri <a className="text-blue-600 hover:text-red-600" href="https://wilfredmutwiri.vercel.app/" target="_blank">View porfolio</a></h2> */}
         </div>
       </div>
     </Footer>
